@@ -28,6 +28,7 @@
 #define tWindowFrameType data[6]
 #define tFollower data[7]
 #define tBattleMode data[8]
+#define tBattleSpeed data[9]
 
 // Page 1 menu items (standard options)
 enum
@@ -47,6 +48,7 @@ enum
 {
     MENUITEM_FOLLOWER,
     MENUITEM_BATTLEMODE,
+    MENUITEM_BATTLESPEED,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -64,6 +66,8 @@ enum
 #define YPOS_SOUND        (MENUITEM_SOUND * 16)
 #define YPOS_BUTTONMODE   (MENUITEM_BUTTONMODE * 16)
 #define YPOS_FRAMETYPE    (MENUITEM_FRAMETYPE * 16)
+#define YPOS_BATTLESPEED      (MENUITEM_BATTLESPEED * 16)
+#define PAGE_COUNT 2
 
 // Y-positions for Page 2 menu items
 #define YPOS_FOLLOWER        (MENUITEM_FOLLOWER * 16)
@@ -93,6 +97,8 @@ static u8 FrameType_ProcessInput(u8 selection);
 static void FrameType_DrawChoices(u8 selection);
 static u8 ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
+static u8   BattleSpeed_ProcessInput(u8 selection);
+static void BattleSpeed_DrawChoices(u8 selection);
 static void DrawHeaderText(void);
 static u8 BattleMode_ProcessInput(u8 selection);
 static void BattleMode_DrawChoices(u8 selection);
@@ -123,6 +129,7 @@ static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
 {
     [MENUITEM_FOLLOWER]        = gText_Follower,
     [MENUITEM_BATTLEMODE]      = gText_BattleMode,
+    [MENUITEM_BATTLESPEED]     = gText_BattleSpeed,
     [MENUITEM_CANCEL_PG2]      = gText_OptionMenuCancel,
 };
 
@@ -199,6 +206,7 @@ static void ReadAllCurrentSettings(u8 taskId)
     gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
     gTasks[taskId].tFollower = FlagGet(FLAG_POKEMON_FOLLOWERS);
     gTasks[taskId].tBattleMode = gSaveBlock2Ptr->battleMode;
+    gTasks[taskId].tBattleSpeed = gSaveBlock2Ptr->optionsBattleSpeed;
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -219,6 +227,7 @@ static void DrawOptionsPg2(u8 taskId)
     ReadAllCurrentSettings(taskId);
     Follower_DrawChoices(gTasks[taskId].tFollower);
     BattleMode_DrawChoices(gTasks[taskId].tBattleMode);
+    BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -521,7 +530,13 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
             if (previousOption != gTasks[taskId].tBattleMode)
                 BattleMode_DrawChoices(gTasks[taskId].tBattleMode);
             break;
+        case MENUITEM_BATTLESPEED:
+            previousOption = gTasks[taskId].tBattleSpeed;
+            gTasks[taskId].tBattleSpeed = BattleSpeed_ProcessInput(gTasks[taskId].tBattleSpeed);
 
+            if (previousOption != gTasks[taskId].tBattleSpeed)
+                BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
+            break; 
         default:
             return;
         }
@@ -543,6 +558,7 @@ static void SaveCurrentSettings(u8 taskId)
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].tButtonMode;
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].tWindowFrameType;
     gSaveBlock2Ptr->battleMode = gTasks[taskId].tBattleMode;
+    gSaveBlock2Ptr->optionsBattleSpeed = gTasks[taskId].tBattleSpeed;
     // Update follower visibility flag
     if (gTasks[taskId].tFollower == 0)
         FlagClear(FLAG_POKEMON_FOLLOWERS);
@@ -589,6 +605,43 @@ static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
 
     dst[i] = EOS;
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, dst, x, y + 1, TEXT_SKIP_DRAW, NULL);
+}
+
+static u8 BattleSpeed_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (++selection > 3)  // If the selection exceeds 3, wrap around to 0
+            selection = 0;
+            sArrowPressed = TRUE;
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        if (--selection > 3)  // If the selection is negative, wrap around to 3
+            selection = 3;
+            sArrowPressed = TRUE;
+    }
+    // Update the battle speed variable based on the selection
+    VarSet(VAR_BATTLE_SPEED, selection);  // Set the battle speed variable
+    return selection;
+}
+
+static void BattleSpeed_DrawChoices(u8 selection)
+{
+    u8 styles[4];
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[2] = 0;
+    styles[3] = 0;
+    styles[selection] = 1;  // Highlight the selected option
+    int xSpacer;
+    xSpacer = (GetStringRightAlignXOffset(1, gText_BattleSpeed4x, 198) - 104) / 3;
+
+    // Draw each menu choice at the calculated positions
+    DrawOptionMenuChoice(gText_BattleSpeed1x, 104, YPOS_BATTLESPEED, styles[0]);
+    DrawOptionMenuChoice(gText_BattleSpeed2x, 104 + xSpacer, YPOS_BATTLESPEED, styles[1]);
+    DrawOptionMenuChoice(gText_BattleSpeed3x, 104 + 2 * xSpacer, YPOS_BATTLESPEED, styles[2]);
+    DrawOptionMenuChoice(gText_BattleSpeed4x, GetStringRightAlignXOffset(1, gText_BattleSpeed4x, 198), YPOS_BATTLESPEED, styles[3]);
 }
 
 static u8 TextSpeed_ProcessInput(u8 selection)
