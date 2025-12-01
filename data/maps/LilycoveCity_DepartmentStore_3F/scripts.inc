@@ -187,35 +187,35 @@ EvoMart:
 # 98 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
 	.2byte ITEM_LEAF_STONE
 # 99 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_LINKING_CORD
 # 100 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_METAL_COAT
+	.2byte ITEM_MAGMARIZER
 # 101 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_MOON_STONE
+	.2byte ITEM_METAL_COAT
 # 102 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_MOON_STONE
 # 103 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_OVAL_STONE
 # 104 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_PROTECTOR
+	.2byte ITEM_PRISM_SCALE
 # 105 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_PROTECTOR
 # 106 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_RAZOR_CLAW
 # 107 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_REAPER_CLOTH
+	.2byte ITEM_RAZOR_FANG
 # 108 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_REAPER_CLOTH
 # 109 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_SUN_STONE
+	.2byte ITEM_SHINY_STONE
 # 110 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_SUN_STONE
 # 111 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_UPGRADE
+	.2byte ITEM_THUNDER_STONE
 # 112 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_WATER_STONE
+	.2byte ITEM_UPGRADE
 # 113 "data/maps/LilycoveCity_DepartmentStore_3F/scripts.pory"
-	.2byte ITEM_POKEMON_BOX_LINK
+	.2byte ITEM_WATER_STONE
 	.2byte ITEM_NONE
 
 LilycoveCity_DepartmentStore_3F_EvoMart_Text_0:
