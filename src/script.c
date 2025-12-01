@@ -9,6 +9,9 @@
 #include "constants/flags.h"
 #include "constants/map_scripts.h"
 #include "field_message_box.h"
+#include "ui_birch_case.h"
+#include "task.h"
+#include "field_weather.h"
 
 #define RAM_SCRIPT_MAGIC 51
 
@@ -525,6 +528,11 @@ void InitRamScript_NoObjectEvent(u8 *script, u16 scriptSize)
 #endif //FREE_MYSTERY_EVENT_BUFFERS
 }
 
+void StartNewPokeballCaseUI(void)
+{
+    FadeScreen(FADE_TO_BLACK, 0);
+    CreateTask(Task_OpenBirchCase, 0);
+}
 bool8 LoadTrainerObjectScript(void)
 {
     sGlobalScriptContext.scriptPtr = gApproachingTrainers[gNoOfApproachingTrainers - 1].trainerScriptPtr;
