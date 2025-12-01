@@ -138,3 +138,4 @@ Movement_PkmnCenterNurse_Turn:
    waitmovement 0
    release
    end
+   
