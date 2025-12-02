@@ -200,3 +200,73 @@ Route114_Text_FossilManiacsHouseSign:
 Route114_Text_LanettesHouse:
 	.string "LANETTE'S HOUSE$"
 
+Route114_PietInGameTradeSequence::
+
+	// Check a flag to see if the trade has already happened
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_LUNATONE_TRADE, Route114_EventScript_TradeCompleted
+ 
+	// Buffer the trade and requested mon names and ask if you want to trade
+	setvar VAR_0x8008, INGAME_TRADE_LUNATONE
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox Route114_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route114_DeclineTrade
+ 
+	// Handle the selection of the requested mon from the player
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route114_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, Route114_EventScript_NotRequestedMon 
+ 
+	// Perform the actual trade
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+ 
+	msgbox Route114_TradeThanks, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_LUNATONE_TRADE
+	release
+	end
+ 
+Route114_DeclineTrade::
+	msgbox Route114_DeclineTrade_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+Route114_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Route114_WrongMon_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+Route114_EventScript_TradeCompleted::
+	msgbox Route114_EventScript_TradeCompleted_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+Route114_EventScript_TradeCompleted_Text::
+	.string "Moon? Moon?!\n"
+	.string "I find it so beautiful!\p"
+	.string "You made the sun rise for me.$"
+ 
+Route114_Text_WillingToTradeIt::
+	.string "Do you like the moon as\n"
+	.string "much as I do?\p"
+	.string "I am willing to trade it for a\n"
+	.string "Pokémon that looks like the sun.$"
+ 
+Route114_DeclineTrade_Text::
+	.string "Thats too bad, maybe next time.$"
+ 
+Route114_WrongMon_Text::
+	.string "I'm sorry but that one does\n"
+	.string "not look like the sun...$"
+ 
+Route114_TradeThanks::
+	.string "You made the sun rise for me.$"
+ 
