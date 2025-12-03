@@ -1164,7 +1164,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("Nessie"),
         .species = SPECIES_MILOTIC,
-        .ivs = {4, 5, 4, 5, 4, 4},
+        .ivs = {31, 10, 25, 20, 25, 10},
         .abilityNum = 0,
         .otId = 91485,
         .conditions = {5, 255, 5, 5, 5},
@@ -1172,7 +1172,7 @@ static const struct InGameTrade sIngameTrades[] =
         .heldItem = ITEM_NONE,
         .mailNum = -1,
         .otName = _("BEAUTY"),
-        .otGender = MALE,
+        .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_KINGDRA
     },
