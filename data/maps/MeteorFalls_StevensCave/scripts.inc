@@ -55,3 +55,72 @@ MeteorFalls_StevensCave_Text_MyPredictionCameTrue:
 	.string "… … … … … …\p"
 	.string "Fufufu, even I couldn't tell you that.$"
 
+MeteorFalls_DittoInGameTradeSequence::
+ 
+	// Check a flag to see if the trade has already happened
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_DITTO_TRADE, MeteorFalls_EventScript_TradeCompleted
+ 
+	// Buffer the trade and requested mon names and ask if you want to trade
+	setvar VAR_0x8008, INGAME_TRADE_DITTO
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox MeteorFalls_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MeteorFalls_DeclineTrade
+ 
+	// Handle the selection of the requested mon from the player
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, MeteorFalls_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, MeteorFalls_EventScript_NotRequestedMon 
+ 
+	// Perform the actual trade
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+ 
+	msgbox MeteorFalls_TradeThanks, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_DITTO_TRADE
+	release
+	end
+ 
+MeteorFalls_DeclineTrade::
+	msgbox MeteorFalls_DeclineTrade_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+MeteorFalls_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox MeteorFalls_WrongMon_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+MeteorFalls_EventScript_TradeCompleted::
+	msgbox MeteorFalls_EventScript_TradeCompleted_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+MeteorFalls_EventScript_TradeCompleted_Text::
+	.string "Thanks for your efforts!\n"
+	.string "but where is the difference?$"
+ 
+MeteorFalls_Text_WillingToTradeIt::
+	.string "You made all your way up!\n"
+	.string "here!\p"
+	.string "I hope you brought the correct\n"
+	.string "copy of me...$"
+ 
+MeteorFalls_DeclineTrade_Text::
+	.string "Thats too bad, maybe next time.$"
+ 
+MeteorFalls_WrongMon_Text::
+	.string "I'm sorry but that is not\n"
+	.string "what I was looking for...$"
+ 
+MeteorFalls_TradeThanks::
+	.string "But where is the difference?$"
+ 

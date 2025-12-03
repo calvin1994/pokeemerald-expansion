@@ -1050,12 +1050,12 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_LUNATONE] =
     {
-        .nickname = _("MOONY"),
+        .nickname = _("Moony"),
         .species = SPECIES_LUNATONE,
         .ivs = {5, 4, 5, 4, 4, 4},
         .abilityNum = 1,
         .otId = 38725,
-        .conditions = {30, 5, 5, 5, 5},
+        .conditions = {5, 5, 5, 5, 5},
         .personality = 0x84,
         .heldItem = ITEM_NONE,
         .mailNum = -1,
@@ -1063,6 +1063,118 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_SOLROCK
+    },
+    [INGAME_TRADE_DITTO] =
+    {
+        .nickname = _("Breedy"),
+        .species = SPECIES_DITTO,
+        .ivs = {31, 31, 31, 31, 31, 31},
+        .abilityNum = 1,
+        .otId = 38722,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x84,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("DITTO?"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_DITTO
+    },
+    [INGAME_TRADE_MEDITITE] =
+    {
+        .nickname = _("Kiki"),
+        .species = SPECIES_MEDITITE,
+        .ivs = {4, 5, 4, 5, 4, 4},
+        .abilityNum = 0,
+        .otId = 91485,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("MARCO"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_PHANPY
+    },
+    [INGAME_TRADE_ROSELIA] =
+    {
+        .nickname = _("Lily"),
+        .species = SPECIES_ROSELIA,
+        .ivs = {4, 5, 4, 5, 4, 4},
+        .abilityNum = 0,
+        .otId = 91485,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("ROSE"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_BELLOSSOM
+    },
+    [INGAME_TRADE_EEVEE] =
+    {
+        .nickname = _("Pikachu"),
+        .species = SPECIES_EEVEE,
+        .ivs = {15, 15, 15, 15, 15, 15},
+        .abilityNum = 0,
+        .otId = 91485,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BILL"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_PIKACHU
+    },
+    [INGAME_TRADE_SCYTHER] =
+    {
+        .nickname = _("Scissor"),
+        .species = SPECIES_SCYTHER,
+        .ivs = {5, 4, 5, 5, 4, 4},
+        .abilityNum = 0,
+        .otId = 91485,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("DARWIN"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_PINSIR
+    },
+    [INGAME_TRADE_ZANGOOSE] =
+    {
+        .nickname = _("Zuko"),
+        .species = SPECIES_ZANGOOSE,
+        .ivs = {4, 5, 4, 5, 4, 4},
+        .abilityNum = 0,
+        .otId = 91485,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("GABRIEL"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_SEVIPER
+    },
+    [INGAME_TRADE_MILOTIC] =
+    {
+        .nickname = _("Nessie"),
+        .species = SPECIES_MILOTIC,
+        .ivs = {4, 5, 4, 5, 4, 4},
+        .abilityNum = 0,
+        .otId = 91485,
+        .conditions = {5, 255, 5, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BEAUTY"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_KINGDRA
     },
 };
 

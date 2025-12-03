@@ -93,3 +93,73 @@ FallarborTown_Text_MoveTutorSign:
 	.string "MOVE TUTOR'S HOUSE\n"
 	.string "“New moves taught to POKéMON.”$"
 
+FallarborTown_ZangooseInGameTradeSequence::
+ 
+	// Check a flag to see if the trade has already happened
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_ZANGOOSE_TRADE, FallarborTown_EventScript_TradeCompleted
+ 
+	// Buffer the trade and requested mon names and ask if you want to trade
+	setvar VAR_0x8008, INGAME_TRADE_ZANGOOSE
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox FallarborTown_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FallarborTown_DeclineTrade
+ 
+	// Handle the selection of the requested mon from the player
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, FallarborTown_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, FallarborTown_EventScript_NotRequestedMon 
+ 
+	// Perform the actual trade
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+ 
+	msgbox FallarborTown_TradeThanks, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_ZANGOOSE_TRADE
+	release
+	end
+ 
+FallarborTown_DeclineTrade::
+	msgbox FallarborTown_DeclineTrade_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+FallarborTown_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox FallarborTown_WrongMon_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+FallarborTown_EventScript_TradeCompleted::
+	msgbox FallarborTown_EventScript_TradeCompleted_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+FallarborTown_EventScript_TradeCompleted_Text::
+	.string "Take good care of my Zangoose!$"
+ 
+FallarborTown_Text_WillingToTradeIt::
+	.string "Check out this {STR_VAR_2}!\n"
+	.string "Oh, I can see that you want it!\p"
+	.string "I'll tell you what. I might be willing\n"
+	.string "to trade it for a {STR_VAR_1}.$"
+ 
+FallarborTown_DeclineTrade_Text::
+	.string "Thats too bad, maybe next time.$"
+ 
+FallarborTown_WrongMon_Text::
+	.string "I'm sorry but that is not\n"
+	.string "a {STR_VAR_1}, I cannot trade with you.$"
+ 
+FallarborTown_TradeThanks::
+	.string "Thanks for trading with me.$"
+ 
+ 
+ 

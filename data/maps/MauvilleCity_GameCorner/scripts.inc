@@ -21,8 +21,8 @@ MauvilleCity_GameCorner_MapScripts::
 	.set CHOICEBAND_COINS, 4500
 	.set BRIGHTPOWDER_COINS, 4500
 
-	.set COINS_PRICE_50,  1000
-	.set COINS_PRICE_500, 10000
+	.set COINS_PRICE_50,  5000
+	.set COINS_PRICE_500, 50000
 
 TrainerId_Onframe:
 .if GAME_CORNER_VAR_ID_CHECK != 0

@@ -95,3 +95,71 @@ Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
 	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
 	release
 	end
+
+PrettyPetalFlowerShop_InGameTradeSequence::
+ 
+	// Check a flag to see if the trade has already happened
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_ROSELIA_TRADE, PrettyPetalFlowerShop_EventScript_TradeCompleted
+ 
+	// Buffer the trade and requested mon names and ask if you want to trade
+	setvar VAR_0x8008, INGAME_TRADE_ROSELIA
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox PrettyPetalFlowerShop_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PrettyPetalFlowerShop_DeclineTrade
+ 
+	// Handle the selection of the requested mon from the player
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, PrettyPetalFlowerShop_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, PrettyPetalFlowerShop_EventScript_NotRequestedMon 
+ 
+	// Perform the actual trade
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+ 
+	msgbox PrettyPetalFlowerShop_TradeThanks, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_ROSELIA_TRADE
+	release
+	end
+ 
+PrettyPetalFlowerShop_DeclineTrade::
+	msgbox PrettyPetalFlowerShop_DeclineTrade_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+PrettyPetalFlowerShop_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox PrettyPetalFlowerShop_WrongMon_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+PrettyPetalFlowerShop_EventScript_TradeCompleted::
+	msgbox PrettyPetalFlowerShop_EventScript_TradeCompleted_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+PrettyPetalFlowerShop_EventScript_TradeCompleted_Text::
+	.string "Take good care of my {STR_VAR_2}!$"
+ 
+PrettyPetalFlowerShop_Text_WillingToTradeIt::
+	.string "Check out this {STR_VAR_2}!\n"
+	.string "Oh, I can see that you want it!\p"
+	.string "I'll tell you what. I might be willing\n"
+	.string "to trade it for a {STR_VAR_1}.$"
+ 
+PrettyPetalFlowerShop_DeclineTrade_Text::
+	.string "Thats too bad, maybe next time.$"
+ 
+PrettyPetalFlowerShop_WrongMon_Text::
+	.string "I'm sorry but that is not\n"
+	.string "a {STR_VAR_1}, I cannot trade with you.$"
+ 
+PrettyPetalFlowerShop_TradeThanks::
+	.string "Thanks for trading with me!$"
