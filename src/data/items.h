@@ -12598,12 +12598,12 @@ const struct Item gItemsInfo[] =
 
     [ITEM_MACH_BIKE] =
     {
-        .name = ITEM_NAME("Mach Bike"),
+        .name = ITEM_NAME("Bike"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A folding bicycle\n"
-            "that doubles your\n"
-            "speed or better."),
+            "Pressing R while\n"
+            "standing still: \n"
+            "Toggles Bike Mode"),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
