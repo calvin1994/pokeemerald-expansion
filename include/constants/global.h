@@ -79,7 +79,7 @@
 #define REGISTERED_ITEMS_MAX 10
 
 // Bag constants
-#define BAG_ITEMS_COUNT 30
+#define BAG_ITEMS_COUNT 120
 #define BAG_KEYITEMS_COUNT 30
 #define BAG_POKEBALLS_COUNT 16
 #define BAG_TMHM_COUNT 64
