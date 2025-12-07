@@ -3527,9 +3527,9 @@ GameCorner_Mart1::
 # 1771 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 CoinMart1:
 # 1772 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_ABILITY_PATCH
-# 1773 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.2byte ITEM_LINKING_CORD
+# 1773 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.2byte ITEM_ABILITY_PATCH
 # 1774 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.2byte ITEM_CATCHING_CHARM
 # 1775 "data/maps/MauvilleCity_GameCorner/scripts.pory"

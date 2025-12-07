@@ -1512,64 +1512,106 @@ BattleFrontier_MartHoldItems::
 # 772 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 BPMartHoldItems:
 # 773 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_BIG_ROOT
 # 774 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_WHITE_HERB
+	.2byte ITEM_DESTINY_KNOT
 # 775 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_QUICK_CLAW
+	.2byte ITEM_GRIP_CLAW
 # 776 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_MENTAL_HERB
+	.2byte ITEM_IRON_BALL
 # 777 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_BRIGHT_POWDER
+	.2byte ITEM_LAGGING_TAIL
 # 778 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_METRONOME
 # 779 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_CHOICE_SCARF
+	.2byte ITEM_SHED_SHELL
 # 780 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_CHOICE_SPECS
-# 781 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_STICKY_BARB
 # 782 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_SCOPE_LENS
+	.2byte ITEM_DAMP_ROCK
 # 783 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	.2byte ITEM_FOCUS_BAND
 # 784 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_FOCUS_SASH
+	.2byte ITEM_HEAT_ROCK
 # 785 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_ICY_ROCK
 # 786 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_ASSAULT_VEST
+	.2byte ITEM_MUSCLE_BAND
+# 787 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_QUICK_CLAW
+# 788 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_SHELL_BELL
+# 789 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_SMOOTH_ROCK
+# 790 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_WISE_GLASSES
+# 791 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_ZOOM_LENS
+# 793 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_BLACK_SLUDGE
+# 794 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_BRIGHT_POWDER
+# 795 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_FLAME_ORB
+# 796 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_LIGHT_CLAY
+# 797 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_MENTAL_HERB
+# 798 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_POWER_HERB
+# 799 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_TOXIC_ORB
+# 800 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_WIDE_LENS
+# 802 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_CHOICE_BAND
+# 803 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_CHOICE_SCARF
+# 804 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_CHOICE_SPECS
+# 805 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_FOCUS_SASH
+# 806 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_LEFTOVERS
+# 807 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_LIFE_ORB
+# 808 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_SCOPE_LENS
+# 809 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_WHITE_HERB
 	.2byte ITEM_NONE
 
 BattleFrontier_MartTickets::
-# 790 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 813 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	lock
-# 791 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 814 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	faceplayer
-# 792 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 815 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	message BattleFrontier_MartVitamines_Text_0
-# 798 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 821 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	waitmessage
-# 799 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 822 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	battlepointmart BPMartTickets
-# 800 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 823 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	msgbox BattleFrontier_MartVitamines_Text_1
-# 801 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 824 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 805 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 828 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 BPMartTickets:
-# 806 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 829 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	.2byte ITEM_EON_TICKET
-# 807 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 830 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	.2byte ITEM_MYSTIC_TICKET
-# 808 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 831 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	.2byte ITEM_AURORA_TICKET
-# 809 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+# 832 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	.2byte ITEM_OLD_SEA_MAP
+# 833 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_MASTER_BALL
 	.2byte ITEM_NONE
 
 BattleFrontier_MartVitamines_Text_0:
