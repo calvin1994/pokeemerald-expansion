@@ -164,6 +164,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Strange Ball"),
         .price = 0,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "An unusual Ball\n"
             "warped through\n"
@@ -266,6 +267,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Heal Ball"),
         .price = 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A remedial Ball\n"
             "that restores\n"
@@ -283,6 +285,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Net Ball"),
         .price = 1000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "well on Water- and\n"
@@ -300,6 +303,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Nest Ball"),
         .price = 1000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "better on weaker\n"
@@ -317,6 +321,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Dive Ball"),
         .price = 1000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "better on Pokémon\n"
@@ -334,6 +339,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Dusk Ball"),
         .price = 1000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "Works well if\n"
             "used in a\n"
@@ -351,6 +357,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Timer Ball"),
         .price = 1000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that gains\n"
             "power in battles\n"
@@ -368,6 +375,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Quick Ball"),
         .price = 1000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "Works well if\n"
             "used on the\n"
@@ -385,6 +393,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Repeat Ball"),
         .price = 1000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "better on Pokémon\n"
@@ -402,6 +411,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Luxury Ball"),
         .price = (I_PRICE >= GEN_8) ? 3000 : 1000,
+        .coinPrice = 2000,
         .description = COMPOUND_STRING(
             "A cozy Ball that\n"
             "makes Pokémon\n"
@@ -419,6 +429,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Level Ball"),
         .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "well on lower\n"
@@ -436,6 +447,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Lure Ball"),
         .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "well on fished\n"
@@ -453,6 +465,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Moon Ball"),
         .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "well on Moon\n"
@@ -470,6 +483,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Friend Ball"),
         .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A Ball that makes\n"
             "a Pokémon friendly\n"
@@ -487,6 +501,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Love Ball"),
         .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "Works well on\n"
             "Pokémon of the\n"
@@ -504,6 +519,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Fast Ball"),
         .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "Works well on\n"
             "very fast\n"
@@ -521,6 +537,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Heavy Ball"),
         .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "Works well on\n"
             "very heavy\n"
@@ -538,6 +555,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Dream Ball"),
         .price = 0,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
         #if B_DREAM_BALL_MODIFIER >= GEN_8
             "A Ball that works\n"
@@ -610,6 +628,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Beast Ball"),
         .price = 0,
+        .coinPrice = 2000,
         .description = COMPOUND_STRING(
             "A Ball designed to\n"
             "catch Ultra Beasts."),
@@ -626,6 +645,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Cherish Ball"),
         .price = 0,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A rare Ball made\n"
             "in commemoration\n"
@@ -1369,6 +1389,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("HP Up"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
+        .bpPrice = 1,
         .description = COMPOUND_STRING(
             "Raises the base HP\n"
             "of one Pokémon."),
@@ -1386,6 +1407,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Protein"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
+        .bpPrice = 1,
         .description = COMPOUND_STRING(
             "Raises the base\n"
             "Attack stat of one\n"
@@ -1404,6 +1426,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Iron"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
+        .bpPrice = 1,
         .description = COMPOUND_STRING(
             "Raises the base\n"
             "Defense stat of\n"
@@ -1422,6 +1445,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Calcium"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
+        .bpPrice = 1,
         .description = COMPOUND_STRING(
             "Raises the base\n"
             "Sp. Atk stat of one\n"
@@ -1440,6 +1464,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Zinc"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
+        .bpPrice = 1,
         .description = COMPOUND_STRING(
             "Raises the base\n"
             "Sp. Def stat of one\n"
@@ -1459,6 +1484,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Carbos"),
         .pluralName = ITEM_PLURAL_NAME("Carbos"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
+        .bpPrice = 1,
         .description = COMPOUND_STRING(
             "Raises the base\n"
             "Speed stat of one\n"
@@ -1477,6 +1503,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("PP Up"),
         .price = (I_PRICE == GEN_1) ? 1 : ((I_PRICE >= GEN_7) ? 10000 : 9800),
+        .bpPrice = 1,
         .description = COMPOUND_STRING(
             "Raises the maximum\n"
             "PP of a selected\n"
@@ -1495,6 +1522,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("PP Max"),
         .pluralName = ITEM_PLURAL_NAME("PP Maxes"),
+        .bpPrice = 5,
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
         .description = COMPOUND_STRING(
             "Raises the PP of a\n"
@@ -1625,6 +1653,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Ability Patch"),
         .pluralName = ITEM_PLURAL_NAME("Ability Patches"),
         .price = (I_PRICE >= GEN_9) ? 250000 : 20,
+        .coinPrice = 2500,
         .holdEffectParam = 0,
         .description = COMPOUND_STRING(
             "Turns the ability\n"
@@ -1644,6 +1673,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Lonely Mint"),
         .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .coinPrice = 10,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Attack, but\n"
@@ -7996,6 +8026,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Silk Scarf"),
         .pluralName = ITEM_PLURAL_NAME("Silk Scarves"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8016,6 +8047,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Charcoal"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 9800),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8037,6 +8069,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Mystic Water"),
         .pluralName = ITEM_PLURAL_NAME("Mystic Water"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8057,6 +8090,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Magnet"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8077,6 +8111,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Miracle Seed"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = sRoseIncenseDesc,
@@ -8095,6 +8130,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Never-Melt Ice"),
         .pluralName = ITEM_PLURAL_NAME("Never-Melt Ice"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8115,6 +8151,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Black Belt"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8135,6 +8172,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Poison Barb"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8156,6 +8194,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Soft Sand"),
         .pluralName = ITEM_PLURAL_NAME("Soft Sand"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8176,6 +8215,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Sharp Beak"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8196,6 +8236,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Twisted Spoon"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = sOddIncenseDesc,
@@ -8214,6 +8255,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Silver Powder"),
         .pluralName = ITEM_PLURAL_NAME("Silver Powder"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8234,6 +8276,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Hard Stone"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = sRockIncenseDesc,
@@ -8251,6 +8294,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Spell Tag"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8271,6 +8315,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Dragon Fang"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8292,6 +8337,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Black Glasses"),
         .pluralName = ITEM_PLURAL_NAME("Black Glasses"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 1000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8312,6 +8358,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Metal Coat"),
         .price = (I_PRICE >= GEN_9) ? 3000 : ((I_PRICE >= GEN_7) ? 2000 : 100),
+        .coinPrice = 1500,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = COMPOUND_STRING(
@@ -8335,6 +8382,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Choice Band"),
         .price = (I_PRICE >= GEN_9) ? 100000 : ((I_PRICE >= GEN_7) ? 4000 : 100),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_CHOICE_BAND,
         .description = COMPOUND_STRING(
             "Boosts Attack, but\n"
@@ -8354,6 +8402,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Choice Specs"),
         .pluralName = ITEM_PLURAL_NAME("Choice Specs"),
         .price = (I_PRICE >= GEN_9) ? 100000 : ((I_PRICE >= GEN_7) ? 4000 : 100),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_CHOICE_SPECS,
         .description = COMPOUND_STRING(
             "Boosts Sp. Atk, but\n"
@@ -8373,6 +8422,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Choice Scarf"),
         .pluralName = ITEM_PLURAL_NAME("Choice Scarves"),
         .price = (I_PRICE >= GEN_9) ? 100000 : ((I_PRICE >= GEN_7) ? 4000 : 100),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_CHOICE_SCARF,
         .description = COMPOUND_STRING(
             "Boosts Speed, but\n"
@@ -8676,6 +8726,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Bright Powder"),
         .pluralName = ITEM_PLURAL_NAME("Bright Powder"),
         .price = (I_PRICE >= GEN_9) ? 30000 : ((I_PRICE >= GEN_7) ? 4000 : 10),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_EVASION_UP,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
@@ -8695,6 +8746,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("White Herb"),
         .price = (I_PRICE >= GEN_9) ? 20000 : ((I_PRICE >= GEN_7) ? 4000 : 100),
+        .bpPrice = 48,
         .holdEffect = HOLD_EFFECT_WHITE_HERB,
         .description = COMPOUND_STRING(
             "A hold item that\n"
@@ -8739,6 +8791,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Quick Claw"),
         .price = (I_PRICE >= GEN_9) ? 8000 : ((I_PRICE >= GEN_7) ? 4000 : 100),
+        .bpPrice = 48,
         .holdEffect = HOLD_EFFECT_QUICK_CLAW,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
@@ -8776,6 +8829,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Mental Herb"),
         .price = (I_PRICE >= GEN_9) ? 10000 : ((I_PRICE >= GEN_7) ? 4000 : 100),
+        .bpPrice = 48,
         .holdEffect = HOLD_EFFECT_MENTAL_HERB,
         .description = COMPOUND_STRING(
         #if B_MENTAL_HERB >= GEN_5
@@ -8800,6 +8854,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("King's Rock"),
         .price = (I_PRICE >= GEN_9) ? 10000 : ((I_PRICE >= GEN_7) ? 5000 : 100),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_FLINCH,
         .holdEffectParam = 10,
         .description = sKingsRockDesc,
@@ -8865,6 +8920,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Focus Band"),
         .price = (I_PRICE >= GEN_9) ? 10000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_FOCUS_BAND,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
@@ -8884,6 +8940,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Lucky Egg"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 200,
+        .coinPrice = 9999,
         .holdEffect = HOLD_EFFECT_LUCKY_EGG,
         .description = COMPOUND_STRING(
             "A hold item that\n"
@@ -8903,6 +8960,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Scope Lens"),
         .pluralName = ITEM_PLURAL_NAME("Scope Lenses"),
         .price = (I_PRICE >= GEN_9) ? 15000 : ((I_PRICE >= GEN_7) ? 4000 : 100),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_SCOPE_LENS,
         .description = COMPOUND_STRING(
             "A hold item that\n"
@@ -8922,6 +8980,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Leftovers"),
         .pluralName = ITEM_PLURAL_NAME("Leftovers"),
         .price = (I_PRICE >= GEN_9) ? 20000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .bpPrice = 48,
         .holdEffect = HOLD_EFFECT_LEFTOVERS,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
@@ -9057,6 +9116,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Life Orb"),
         .price = (I_PRICE >= GEN_9) ? 50000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_LIFE_ORB,
         .description = COMPOUND_STRING(
             "Boosts move power\n"
@@ -9094,6 +9154,7 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Focus Sash"),
         .pluralName = ITEM_PLURAL_NAME("Focus Sashes"),
         .price = (I_PRICE >= GEN_9) ? 50000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_FOCUS_SASH,
         .description = COMPOUND_STRING(
             "If the holder has\n"
@@ -9500,6 +9561,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Assault Vest"),
         .price = (I_PRICE >= GEN_9) ? 50000 : 1000,
+        .bpPrice = 64,
         .holdEffect = HOLD_EFFECT_ASSAULT_VEST,
         .holdEffectParam = 50,
         .description = COMPOUND_STRING(
@@ -11141,6 +11203,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("TM13"),
         .price = 3000,
+        .coinPrice = 4000,
         .description = COMPOUND_STRING(
             "Fires an icy cold\n"
             "beam that may\n"
@@ -11305,6 +11368,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("TM24"),
         .price = 3000,
+        .coinPrice = 4000,
         .description = COMPOUND_STRING(
             "A powerful electric\n"
             "attack that may\n"
@@ -11375,6 +11439,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("TM29"),
         .price = 2000,
+        .coinPrice = 3500,
         .description = COMPOUND_STRING(
             "A powerful psychic\n"
             "attack that may\n"
@@ -11417,6 +11482,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("TM32"),
         .price = 2000,
+        .coinPrice = 1500,
         .description = COMPOUND_STRING(
             "Creates illusory\n"
             "copies to enhance\n"
@@ -11459,6 +11525,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("TM35"),
         .price = 3000,
+        .coinPrice = 4000,
         .description = COMPOUND_STRING(
             "Looses a stream of\n"
             "fire that may burn\n"
@@ -12380,6 +12447,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Catching Charm"),
         .price = 0,
+        .coinPrice = 5000,
         .importance = 1,
         .description = COMPOUND_STRING(
             "A charm that raises\n"
@@ -12976,6 +13044,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Eon Ticket"),
         .price = 0,
+        .bpPrice = 500,
         .description = COMPOUND_STRING(
             "The ticket for a\n"
             "ferry to a distant\n"
@@ -12993,6 +13062,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Mystic Ticket"),
         .price = 0,
+        .bpPrice = 500,
         .description = COMPOUND_STRING(
             "A ticket required\n"
             "to board the ship\n"
@@ -13009,6 +13079,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Aurora Ticket"),
         .price = 0,
+        .bpPrice = 500,
         .description = COMPOUND_STRING(
             "A ticket required\n"
             "to board the ship\n"
@@ -13025,6 +13096,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Old Sea Map"),
         .price = 0,
+        .bpPrice = 500,
         .description = COMPOUND_STRING(
             "A faded sea chart\n"
             "that shows the way\n"
@@ -14050,6 +14122,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Linking Cord"),
         .price = 8000,
+        .coinPrice = 500,
         .description = COMPOUND_STRING(
             "A mysterious string\n"
             "that makes some\n"
