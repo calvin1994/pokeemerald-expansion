@@ -30,7 +30,7 @@
     },
     {
       "local_id": "LOCALID_METEOR_FALLS_DITTO",
-      "graphics_id": "OBJ_EVENT_GFX_DITTO_DOLL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DITTO)",
       "x": 12,
       "y": 7,
       "elevation": 3,

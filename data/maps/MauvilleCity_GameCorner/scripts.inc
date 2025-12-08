@@ -3689,6 +3689,18 @@ CoinMartHoldItems:
 	.2byte ITEM_TWISTED_SPOON
 	.2byte ITEM_NONE
 
+GameCorner_MeowthTalk::
+# 1874 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	lock
+# 1875 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	faceplayer
+# 1876 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox GameCorner_MeowthTalk_Text_0
+# 1880 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	release
+	end
+
+
 GameCorner_Mart1_Text_0:
 # 1760 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "Welcome!\p"
@@ -3715,3 +3727,10 @@ GameCorner_MartTM_Text_0:
 	.string "You can exchange your COINS for\n"
 	.string "TMs here.\p"
 	.string "How may I serve you?$"
+
+GameCorner_MeowthTalk_Text_0:
+# 1876 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "It is Pay Day time!\p"
+	.string "Cough.. Cough..\p"
+	.string "I mean..\p"
+	.string "Meowth!$"

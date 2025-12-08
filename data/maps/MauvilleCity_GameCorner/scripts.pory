@@ -1869,3 +1869,14 @@ mart CoinMartHoldItems {
 	ITEM_SPELL_TAG
 	ITEM_TWISTED_SPOON
 }
+
+script GameCorner_MeowthTalk{
+    lock
+	faceplayer
+    msgbox("It is Pay Day time!\p"
+    "Cough.. Cough..\p"
+	"I mean..\p"
+	"Meowth!")
+    release
+    end
+}
