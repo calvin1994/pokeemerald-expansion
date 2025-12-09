@@ -1232,7 +1232,7 @@
 #define FLAG_INGAME_MILOTIC_TRADE                                   0x49A // Trade Milotic Flag
 #define FLAG_INGAME_DRATINI_TRADE                                   0x49B // Trade Dratini Flag
 #define FLAG_INGAME_LARVITAR_TRADE                                  0x49C // Trade Larvitar Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
+#define FLAG_INGAME_GASTLY_TRADE                                    0x49D // Trade Gastly Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag

@@ -2778,6 +2778,18 @@ MintMart:
 	.2byte ITEM_SERIOUS_MINT
 	.2byte ITEM_NONE
 
+SlateportCity_QoLTips::
+# 1397 "data/maps/SlateportCity/scripts.pory"
+	lock
+# 1398 "data/maps/SlateportCity/scripts.pory"
+	faceplayer
+# 1399 "data/maps/SlateportCity/scripts.pory"
+	msgbox SlateportCity_QoLTips_Text_0
+# 1404 "data/maps/SlateportCity/scripts.pory"
+	releaseall
+	return
+
+
 SlateportCity_Mart_Mints_Text_0:
 # 1361 "data/maps/SlateportCity/scripts.pory"
 	.string "You want to change your Pokemons \n"
@@ -2790,3 +2802,11 @@ SlateportCity_Mart_Mints_Text_1:
 SlateportCity_Mart_Mints_Text_2:
 # 1367 "data/maps/SlateportCity/scripts.pory"
 	.string "Please Come Again.$"
+
+SlateportCity_QoLTips_Text_0:
+# 1399 "data/maps/SlateportCity/scripts.pory"
+	.string "You gathered too many items?\p"
+	.string "The amount of items makes your bag\n"
+	.string "confusing?\p"
+	.string "Just press START inside your bag!\n"
+	.string "Never it was easier sorting things!$"

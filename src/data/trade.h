@@ -1208,6 +1208,22 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_BELDUM
     },
+    [INGAME_TRADE_GASTLY] =
+    {
+        .nickname = _("Bubblegum"),
+        .species = SPECIES_GASTLY,
+        .ivs = {16, 16, 16, 16, 16, 16},
+        .abilityNum = 0,
+        .otId = 91485,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("URI"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_ABRA
+    },
 };
 
 static const u16 sIngameTradeMail[][MAIL_WORDS_COUNT + 1] =

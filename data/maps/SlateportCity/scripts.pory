@@ -1392,3 +1392,14 @@ mart MintMart {
 	ITEM_NAIVE_MINT
 	ITEM_SERIOUS_MINT
 }
+
+script SlateportCity_QoLTips {
+    lock
+    faceplayer
+    msgbox("You gathered too many items?\p"
+	"The amount of items makes your bag\n"
+	"confusing?\p"
+	"Just press START inside your bag!\n"
+	"Never it was easier sorting things!")
+    releaseall
+}
