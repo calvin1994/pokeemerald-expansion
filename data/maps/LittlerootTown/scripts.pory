@@ -146,6 +146,11 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
 	waitmovement 0
 	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_MUM
+	setflag FLAG_HIDE_PROF
+	setflag FLAG_HIDE_PROF2
+	setflag FLAG_HIDE_BIRCH_BAG_CAUGHT
+	setvar VAR_PROF_AND_MUM_TRIGGER, 1
 	closemessage
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachDoor
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerApproachDoor

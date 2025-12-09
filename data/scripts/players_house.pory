@@ -675,3 +675,96 @@ EventScript_RunningShoesManual::
 	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
 	end
 `
+script Trigger_ProfAndMum {
+	lockall
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_MOM_PROF, Caughty)
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM, Caughty)
+	waitmovement(0)
+	playse(SE_BIKE_HOP)
+	msgbox("Oh shit, we got caught!")
+	setvar(VAR_PROF_AND_MUM_TRIGGER, 1)
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM, ProfMoves)
+	delay(12)
+	addobject(9)
+	clearflag (FLAG_HIDE_BIRCH_BAG_CAUGHT)
+	waitmovement(0)
+	removeobject(10)
+	playse(SE_EXIT)
+	setflag (FLAG_HIDE_PROF)
+	releaseall
+}
+
+movement Caughty {
+	face_down
+	jump_in_place_down
+}
+
+movement ProfMoves {
+	walk_down * 2
+	walk_right * 3
+	walk_down * 4
+}
+
+script PlayersHouse_1F_EventScript_MumCaught {
+    lock
+	faceplayer
+    msgbox("Oh honey...\p"
+    "Please forget what you just saw!")
+    release
+    end
+}
+
+script PlayersHouse_1F_EventScript_BirchStarterBag {
+	lock
+    callnative(StartNewPokeballCaseUI)
+    waitstate
+	applymovement(OBJ_EVENT_ID_PLAYER, PlayerToLeft)
+	playse(SE_DOOR)
+	addobject(11)
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves2)
+	waitmovement(0)
+	removeobject(9)
+	msgbox("Let me get my bag real quick.")
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves3)
+	waitmovement(0)
+	removeobject(11)
+	playse(SE_EXIT)
+	closemessage
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_MOM_PROF, MomMoves)
+	waitmovement(0)
+    setflag(FLAG_HIDE_MUM)
+	setflag (FLAG_HIDE_PROF)
+	clearflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
+	release   
+}
+
+movement PlayerToLeft {
+	walk_left *2
+	face_right
+}
+
+movement MomMoves {
+	walk_down * 3
+	walk_left * 3
+	walk_down
+	face_right
+}
+
+movement ProfMoves2 {
+	walk_up * 4
+	walk_left * 3
+	walk_up
+}
+
+movement ProfMoves3 {
+	walk_down
+	walk_right * 3
+	walk_down * 4
+}
+
+script testytest {
+	clearflag (FLAG_HIDE_MUM)
+	clearflag (FLAG_HIDE_PROF)
+	setvar (VAR_PROF_AND_MUM_TRIGGER, 2)
+	setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
+}

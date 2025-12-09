@@ -120,8 +120,22 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_MUM_AND_PROF"
+      "script": "PlayersHouse_1F_EventScript_MumCaught",
+      "flag": "FLAG_HIDE_MUM"
+    },
+    {
+      "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_BAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse_1F_EventScript_BirchStarterBag",
+      "flag": "FLAG_HIDE_BIRCH_BAG_CAUGHT"
     },
     {
       "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_MOM",
@@ -135,7 +149,21 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_MUM_AND_PROF"
+      "flag": "FLAG_HIDE_PROF"
+    },
+    {
+      "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 9,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_PROF2"
     }
   ],
   "warp_events": [
@@ -197,6 +225,69 @@
       "var": "VAR_LITTLEROOT_RIVAL_STATE",
       "var_value": "2",
       "script": "LittlerootTown_BrendansHouse_1F_EventScript_MeetRival2"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
     }
   ],
   "bg_events": []

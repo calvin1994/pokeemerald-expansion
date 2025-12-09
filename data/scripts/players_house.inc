@@ -1350,3 +1350,222 @@ EventScript_RunningShoesManual::
 	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
 # 676 "data/scripts/players_house.pory"
 	end
+
+Trigger_ProfAndMum::
+# 679 "data/scripts/players_house.pory"
+	lockall
+# 680 "data/scripts/players_house.pory"
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM_PROF, Caughty
+# 681 "data/scripts/players_house.pory"
+	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM, Caughty
+# 682 "data/scripts/players_house.pory"
+	waitmovement 0
+# 683 "data/scripts/players_house.pory"
+	playse SE_BIKE_HOP
+# 684 "data/scripts/players_house.pory"
+	msgbox Trigger_ProfAndMum_Text_0
+# 685 "data/scripts/players_house.pory"
+	setvar VAR_PROF_AND_MUM_TRIGGER, 1
+# 686 "data/scripts/players_house.pory"
+	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM, ProfMoves
+# 687 "data/scripts/players_house.pory"
+	delay 12
+# 688 "data/scripts/players_house.pory"
+	addobject 9
+# 689 "data/scripts/players_house.pory"
+	clearflag FLAG_HIDE_BIRCH_BAG_CAUGHT
+# 690 "data/scripts/players_house.pory"
+	waitmovement 0
+# 691 "data/scripts/players_house.pory"
+	removeobject 10
+# 692 "data/scripts/players_house.pory"
+	playse SE_EXIT
+# 693 "data/scripts/players_house.pory"
+	setflag FLAG_HIDE_PROF
+# 694 "data/scripts/players_house.pory"
+	releaseall
+	return
+
+
+# 697 "data/scripts/players_house.pory"
+Caughty:
+# 698 "data/scripts/players_house.pory"
+	face_down
+# 699 "data/scripts/players_house.pory"
+	jump_in_place_down
+	step_end
+
+# 702 "data/scripts/players_house.pory"
+ProfMoves:
+# 703 "data/scripts/players_house.pory"
+	walk_down
+# 703 "data/scripts/players_house.pory"
+	walk_down
+# 704 "data/scripts/players_house.pory"
+	walk_right
+# 704 "data/scripts/players_house.pory"
+	walk_right
+# 704 "data/scripts/players_house.pory"
+	walk_right
+# 705 "data/scripts/players_house.pory"
+	walk_down
+# 705 "data/scripts/players_house.pory"
+	walk_down
+# 705 "data/scripts/players_house.pory"
+	walk_down
+# 705 "data/scripts/players_house.pory"
+	walk_down
+	step_end
+
+PlayersHouse_1F_EventScript_MumCaught::
+# 709 "data/scripts/players_house.pory"
+	lock
+# 710 "data/scripts/players_house.pory"
+	faceplayer
+# 711 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_EventScript_MumCaught_Text_0
+# 713 "data/scripts/players_house.pory"
+	release
+	end
+
+
+PlayersHouse_1F_EventScript_BirchStarterBag::
+# 718 "data/scripts/players_house.pory"
+	lock
+# 719 "data/scripts/players_house.pory"
+	callnative StartNewPokeballCaseUI
+# 720 "data/scripts/players_house.pory"
+	waitstate
+# 721 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerToLeft
+# 722 "data/scripts/players_house.pory"
+	playse SE_DOOR
+# 723 "data/scripts/players_house.pory"
+	addobject 11
+# 724 "data/scripts/players_house.pory"
+	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves2
+# 725 "data/scripts/players_house.pory"
+	waitmovement 0
+# 726 "data/scripts/players_house.pory"
+	removeobject 9
+# 727 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_EventScript_BirchStarterBag_Text_0
+# 728 "data/scripts/players_house.pory"
+	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves3
+# 729 "data/scripts/players_house.pory"
+	waitmovement 0
+# 730 "data/scripts/players_house.pory"
+	removeobject 11
+# 731 "data/scripts/players_house.pory"
+	playse SE_EXIT
+# 732 "data/scripts/players_house.pory"
+	closemessage
+# 733 "data/scripts/players_house.pory"
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM_PROF, MomMoves
+# 734 "data/scripts/players_house.pory"
+	waitmovement 0
+# 735 "data/scripts/players_house.pory"
+	setflag FLAG_HIDE_MUM
+# 736 "data/scripts/players_house.pory"
+	setflag FLAG_HIDE_PROF
+# 737 "data/scripts/players_house.pory"
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM
+# 738 "data/scripts/players_house.pory"
+	release
+	return
+
+
+# 741 "data/scripts/players_house.pory"
+PlayerToLeft:
+# 742 "data/scripts/players_house.pory"
+	walk_left
+# 742 "data/scripts/players_house.pory"
+	walk_left
+# 743 "data/scripts/players_house.pory"
+	face_right
+	step_end
+
+# 746 "data/scripts/players_house.pory"
+MomMoves:
+# 747 "data/scripts/players_house.pory"
+	walk_down
+# 747 "data/scripts/players_house.pory"
+	walk_down
+# 747 "data/scripts/players_house.pory"
+	walk_down
+# 748 "data/scripts/players_house.pory"
+	walk_left
+# 748 "data/scripts/players_house.pory"
+	walk_left
+# 748 "data/scripts/players_house.pory"
+	walk_left
+# 749 "data/scripts/players_house.pory"
+	walk_down
+# 750 "data/scripts/players_house.pory"
+	face_right
+	step_end
+
+# 753 "data/scripts/players_house.pory"
+ProfMoves2:
+# 754 "data/scripts/players_house.pory"
+	walk_up
+# 754 "data/scripts/players_house.pory"
+	walk_up
+# 754 "data/scripts/players_house.pory"
+	walk_up
+# 754 "data/scripts/players_house.pory"
+	walk_up
+# 755 "data/scripts/players_house.pory"
+	walk_left
+# 755 "data/scripts/players_house.pory"
+	walk_left
+# 755 "data/scripts/players_house.pory"
+	walk_left
+# 756 "data/scripts/players_house.pory"
+	walk_up
+	step_end
+
+# 759 "data/scripts/players_house.pory"
+ProfMoves3:
+# 760 "data/scripts/players_house.pory"
+	walk_down
+# 761 "data/scripts/players_house.pory"
+	walk_right
+# 761 "data/scripts/players_house.pory"
+	walk_right
+# 761 "data/scripts/players_house.pory"
+	walk_right
+# 762 "data/scripts/players_house.pory"
+	walk_down
+# 762 "data/scripts/players_house.pory"
+	walk_down
+# 762 "data/scripts/players_house.pory"
+	walk_down
+# 762 "data/scripts/players_house.pory"
+	walk_down
+	step_end
+
+testytest::
+# 766 "data/scripts/players_house.pory"
+	clearflag FLAG_HIDE_MUM
+# 767 "data/scripts/players_house.pory"
+	clearflag FLAG_HIDE_PROF
+# 768 "data/scripts/players_house.pory"
+	setvar VAR_PROF_AND_MUM_TRIGGER, 2
+# 769 "data/scripts/players_house.pory"
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM
+	return
+
+
+Trigger_ProfAndMum_Text_0:
+# 684 "data/scripts/players_house.pory"
+	.string "Oh shit, we got caught!$"
+
+PlayersHouse_1F_EventScript_MumCaught_Text_0:
+# 711 "data/scripts/players_house.pory"
+	.string "Oh honey...\p"
+	.string "Please forget what you just saw!$"
+
+PlayersHouse_1F_EventScript_BirchStarterBag_Text_0:
+# 727 "data/scripts/players_house.pory"
+	.string "Let me get my bag real quick.$"

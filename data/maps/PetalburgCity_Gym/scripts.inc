@@ -379,7 +379,10 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setvar VAR_PETALBURG_GYM_STATE, 7
 	setflag FLAG_BADGE05_GET
-	setflag FLAG_MUM_AND_PROF
+	@ clearflag FLAG_HIDE_MUM
+	@ clearflag FLAG_HIDE_PROF
+	@ setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
+	@ setvar VAR_PROF_AND_MUM_TRIGGER, 2
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
