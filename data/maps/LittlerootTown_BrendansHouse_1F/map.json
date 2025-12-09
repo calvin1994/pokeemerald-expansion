@@ -121,10 +121,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PlayersHouse_1F_EventScript_MumCaught",
-      "flag": "FLAG_HIDE_MUM"
+      "flag": "FLAG_HIDE_MUM_M"
     },
     {
-      "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_BAG",
+      "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_BAG_M",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 6,
       "y": 2,
@@ -135,7 +135,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PlayersHouse_1F_EventScript_BirchStarterBag",
-      "flag": "FLAG_HIDE_BIRCH_BAG_CAUGHT"
+      "flag": "FLAG_HIDE_BIRCH_BAG_CAUGHT_M"
     },
     {
       "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_MOM",
@@ -149,7 +149,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_PROF"
+      "flag": "FLAG_HIDE_PROF_M"
     },
     {
       "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2",
@@ -163,7 +163,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_PROF2"
+      "flag": "FLAG_HIDE_PROF2_M"
     }
   ],
   "warp_events": [
@@ -231,7 +231,7 @@
       "x": 8,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var": "VAR_PROF_AND_MUM_TRIGGER_M",
       "var_value": "2",
       "script": "Trigger_ProfAndMum"
     },
@@ -240,7 +240,7 @@
       "x": 9,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var": "VAR_PROF_AND_MUM_TRIGGER_M",
       "var_value": "2",
       "script": "Trigger_ProfAndMum"
     },
@@ -249,7 +249,7 @@
       "x": 10,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var": "VAR_PROF_AND_MUM_TRIGGER_M",
       "var_value": "2",
       "script": "Trigger_ProfAndMum"
     },
@@ -258,7 +258,7 @@
       "x": 7,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var": "VAR_PROF_AND_MUM_TRIGGER_M",
       "var_value": "2",
       "script": "Trigger_ProfAndMum"
     },
@@ -267,7 +267,7 @@
       "x": 6,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var": "VAR_PROF_AND_MUM_TRIGGER_M",
       "var_value": "2",
       "script": "Trigger_ProfAndMum"
     },
@@ -276,7 +276,7 @@
       "x": 5,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var": "VAR_PROF_AND_MUM_TRIGGER_M",
       "var_value": "2",
       "script": "Trigger_ProfAndMum"
     },
@@ -285,7 +285,7 @@
       "x": 2,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_PROF_AND_MUM_TRIGGER",
+      "var": "VAR_PROF_AND_MUM_TRIGGER_M",
       "var_value": "2",
       "script": "Trigger_ProfAndMum"
     }

@@ -490,3 +490,149 @@ MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome:
 	.string "after this.\p"
 	.string "Oh, yes, I don't live in RUSTBORO CITY.\n"
 	.string "I live right here on this island.$"
+
+MossdeepCity_SpaceCenter_2F_DratiniInGameTradeSequence::
+ 
+	// Check a flag to see if the trade has already happened
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_DRATINI_TRADE, MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted
+ 
+	// Buffer the trade and requested mon names and ask if you want to trade
+	setvar VAR_0x8008, INGAME_TRADE_DRATINI
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox MossdeepCity_SpaceCenter_2F_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_SpaceCenter_2F_DeclineTrade
+ 
+	// Handle the selection of the requested mon from the player
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, MossdeepCity_SpaceCenter_2F_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, MossdeepCity_SpaceCenter_2F_EventScript_NotRequestedMon 
+ 
+	// Perform the actual trade
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+ 
+	msgbox MossdeepCity_SpaceCenter_2F_TradeThanks, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_DRATINI_TRADE
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_DeclineTrade::
+	msgbox MossdeepCity_SpaceCenter_2F_DeclineTrade_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox MossdeepCity_SpaceCenter_2F_WrongMon_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted::
+	msgbox MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted_Text::
+	.string "You made a significant scientific \n"
+	.string "contribution.!$"
+ 
+	MossdeepCity_SpaceCenter_2F_Text_WillingToTradeIt::
+	.string "I've heard someone around here\n"
+	.string "got an {STR_VAR_1}!\p"
+	.string "I could need it for scientific\n"
+	.string "purpose!\p"
+	.string "Don't trade it to my brother!\p"
+	.string "I will give you an {STR_VAR_2} in exchange!$"
+ 
+	MossdeepCity_SpaceCenter_2F_DeclineTrade_Text::
+	.string "I hope you don't trade it to my\n"
+	.string "brother!$"
+ 
+	MossdeepCity_SpaceCenter_2F_WrongMon_Text::
+	.string "For my current research I need an\n"
+	.string "{STR_VAR_1}.$"
+ 
+	MossdeepCity_SpaceCenter_2F_TradeThanks::
+	.string "Thanks for trading with me\n"
+	.string "instead of my brother!$"
+
+MossdeepCity_SpaceCenter_2F_LarvitarInGameTradeSequence::
+ 
+	// Check a flag to see if the trade has already happened
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_LARVITAR_TRADE, MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted2
+ 
+	// Buffer the trade and requested mon names and ask if you want to trade
+	setvar VAR_0x8008, INGAME_TRADE_LARVITAR
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox MossdeepCity_SpaceCenter_2F_Text_WillingToTradeIt2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_SpaceCenter_2F_DeclineTrade2
+ 
+	// Handle the selection of the requested mon from the player
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, MossdeepCity_SpaceCenter_2F_DeclineTrade2
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, MossdeepCity_SpaceCenter_2F_EventScript_NotRequestedMon2 
+ 
+	// Perform the actual trade
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+ 
+	msgbox MossdeepCity_SpaceCenter_2F_TradeThanks2, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_LARVITAR_TRADE
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_DeclineTrade2::
+	msgbox MossdeepCity_SpaceCenter_2F_DeclineTrade_Text2, MSGBOX_DEFAULT
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_EventScript_NotRequestedMon2::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox MossdeepCity_SpaceCenter_2F_WrongMon_Text2, MSGBOX_DEFAULT
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted2::
+	msgbox MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted_Text2, MSGBOX_DEFAULT
+	release
+	end
+ 
+	MossdeepCity_SpaceCenter_2F_EventScript_TradeCompleted_Text2::
+	.string "You made a significant scientific \n"
+	.string "contribution.!$"
+ 
+	MossdeepCity_SpaceCenter_2F_Text_WillingToTradeIt2::
+	.string "I've heard someone around here\n"
+	.string "got an {STR_VAR_1}!\p"
+	.string "I could need it for scientific\n"
+	.string "purpose!\p"
+	.string "Don't trade it to my brother!\p"
+	.string "I will give you an {STR_VAR_2} in exchange!$"
+ 
+	MossdeepCity_SpaceCenter_2F_DeclineTrade_Text2::
+	.string "I hope you don't trade it to my\n"
+	.string "brother!$"
+ 
+	MossdeepCity_SpaceCenter_2F_WrongMon_Text2::
+	.string "For my current research I need an\n"
+	.string "{STR_VAR_1}.$"
+ 
+	MossdeepCity_SpaceCenter_2F_TradeThanks2::
+	.string "Thanks for trading with me\n"
+	.string "instead of my brother!$"

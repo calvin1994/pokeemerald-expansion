@@ -675,23 +675,48 @@ EventScript_RunningShoesManual::
 	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
 	end
 `
+
 script Trigger_ProfAndMum {
+	checkplayergender
+if(var(VAR_RESULT) == MALE){
 	lockall
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_MOM_PROF, Caughty)
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM, Caughty)
 	waitmovement(0)
 	playse(SE_BIKE_HOP)
+	applymovement (LOCALID_PLAYERS_HOUSE_1F_MOM_PROF, Common_Movement_ExclamationMark)
+	applymovement (LOCALID_PLAYERS_HOUSE_1F_PROF_MOM, Common_Movement_ExclamationMark)
 	msgbox("Oh shit, we got caught!")
-	setvar(VAR_PROF_AND_MUM_TRIGGER, 1)
+	setvar(VAR_PROF_AND_MUM_TRIGGER_M, 1)
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM, ProfMoves)
 	delay(12)
 	addobject(9)
-	clearflag (FLAG_HIDE_BIRCH_BAG_CAUGHT)
+	clearflag (FLAG_HIDE_BIRCH_BAG_CAUGHT_M)
 	waitmovement(0)
 	removeobject(10)
 	playse(SE_EXIT)
-	setflag (FLAG_HIDE_PROF)
+	setflag (FLAG_HIDE_PROF_M)
 	releaseall
+} else {
+	lockall
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM_F, Caughty)
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_MOM_PROF_F, Caughty)
+	waitmovement(0)
+	playse(SE_BIKE_HOP)
+	applymovement (LOCALID_PLAYERS_HOUSE_1F_PROF_MOM_F, Common_Movement_ExclamationMark)
+	applymovement (LOCALID_PLAYERS_HOUSE_1F_MOM_PROF_F, Common_Movement_ExclamationMark)
+	msgbox("Oh shit, we got caught!")
+	setvar(VAR_PROF_AND_MUM_TRIGGER_F, 1)
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM_F, ProfMoves_F)
+	delay(12)
+	addobject(9)
+	clearflag (FLAG_HIDE_BIRCH_BAG_CAUGHT_F)
+	waitmovement(0)
+	removeobject(10)
+	playse(SE_EXIT)
+	setflag (FLAG_HIDE_PROF_F)
+	releaseall
+}
 }
 
 movement Caughty {
@@ -705,6 +730,12 @@ movement ProfMoves {
 	walk_down * 4
 }
 
+movement ProfMoves_F {
+	walk_down * 2
+	walk_left * 3
+	walk_down * 4
+}
+
 script PlayersHouse_1F_EventScript_MumCaught {
     lock
 	faceplayer
@@ -715,6 +746,8 @@ script PlayersHouse_1F_EventScript_MumCaught {
 }
 
 script PlayersHouse_1F_EventScript_BirchStarterBag {
+checkplayergender
+if(var(VAR_RESULT) == MALE){
 	lock
     callnative(StartNewPokeballCaseUI)
     waitstate
@@ -732,13 +765,41 @@ script PlayersHouse_1F_EventScript_BirchStarterBag {
 	closemessage
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_MOM_PROF, MomMoves)
 	waitmovement(0)
-    setflag(FLAG_HIDE_MUM)
-	setflag (FLAG_HIDE_PROF)
+    setflag(FLAG_HIDE_MUM_M)
+	setflag (FLAG_HIDE_PROF_M)
 	clearflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
 	release   
+} else {
+	lock
+    callnative(StartNewPokeballCaseUI)
+    waitstate
+	applymovement(OBJ_EVENT_ID_PLAYER, PlayerToRight)
+	playse(SE_DOOR)
+	addobject(11)
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2_F, ProfMoves2_F)
+	waitmovement(0)
+	removeobject(9)
+	msgbox("Let me get my bag real quick.")
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves3_F)
+	waitmovement(0)
+	removeobject(11)
+	playse(SE_EXIT)
+	closemessage
+	applymovement(LOCALID_PLAYERS_HOUSE_1F_MOM_PROF_F, MomMoves_F)
+	waitmovement(0)
+    setflag(FLAG_HIDE_MUM_F)
+	setflag (FLAG_HIDE_PROF_F)
+	clearflag(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM)
+	release  
+	}
 }
 
 movement PlayerToLeft {
+	walk_right *2
+	face_left
+}
+
+movement PlayerToRight {
 	walk_left *2
 	face_right
 }
@@ -750,9 +811,22 @@ movement MomMoves {
 	face_right
 }
 
+movement MomMoves_F {
+	walk_down * 3
+	walk_right * 3
+	walk_down
+	face_left
+}
+
 movement ProfMoves2 {
 	walk_up * 4
 	walk_left * 3
+	walk_up
+}
+
+movement ProfMoves2_F {
+	walk_up * 4
+	walk_right * 3
 	walk_up
 }
 
@@ -762,9 +836,23 @@ movement ProfMoves3 {
 	walk_down * 4
 }
 
-script testytest {
-	clearflag (FLAG_HIDE_MUM)
-	clearflag (FLAG_HIDE_PROF)
-	setvar (VAR_PROF_AND_MUM_TRIGGER, 2)
-	setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
+movement ProfMoves3_F {
+	walk_down
+	walk_left * 3
+	walk_down * 4
 }
+
+// script testytest {
+//checkplayergender
+//if(var(VAR_RESULT) == MALE){
+//	clearflag (FLAG_HIDE_MUM_M)
+//	clearflag (FLAG_HIDE_PROF_M)
+//	setvar (VAR_PROF_AND_MUM_TRIGGER_M, 2)
+//	setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
+//} else {
+//	clearflag (FLAG_HIDE_MUM_F)
+//	clearflag (FLAG_HIDE_PROF_F)
+//	setvar (VAR_PROF_AND_MUM_TRIGGER_F, 2)
+//	setflag(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM)
+//}
+//}

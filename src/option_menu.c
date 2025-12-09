@@ -29,6 +29,7 @@
 #define tFollower data[7]
 #define tBattleMode data[8]
 #define tBattleSpeed data[9]
+#define tExpShare data[10]
 
 // Page 1 menu items (standard options)
 enum
@@ -49,6 +50,7 @@ enum
     MENUITEM_FOLLOWER,
     MENUITEM_BATTLEMODE,
     MENUITEM_BATTLESPEED,
+    MENUITEM_EXPSHARE,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -66,12 +68,13 @@ enum
 #define YPOS_SOUND        (MENUITEM_SOUND * 16)
 #define YPOS_BUTTONMODE   (MENUITEM_BUTTONMODE * 16)
 #define YPOS_FRAMETYPE    (MENUITEM_FRAMETYPE * 16)
-#define YPOS_BATTLESPEED      (MENUITEM_BATTLESPEED * 16)
+#define YPOS_BATTLESPEED  (MENUITEM_BATTLESPEED * 16)
 #define PAGE_COUNT 2
 
 // Y-positions for Page 2 menu items
 #define YPOS_FOLLOWER        (MENUITEM_FOLLOWER * 16)
 #define YPOS_BATTLEMODE      (MENUITEM_BATTLEMODE * 16)
+#define YPOS_EXPSHARE        (MENUITEM_EXPSHARE * 16)
 
 // Total number of pages in the options menu (use L/R to navigate)
 #define PAGE_COUNT  2
@@ -91,6 +94,8 @@ static u8 BattleStyle_ProcessInput(u8 selection);
 static void BattleStyle_DrawChoices(u8 selection);
 static u8 Follower_ProcessInput(u8 selection);
 static void Follower_DrawChoices(u8 selection);
+static u8 ExpShare_ProcessInput(u8 selection);
+static void ExpShare_DrawChoices(u8 selection);
 static u8 Sound_ProcessInput(u8 selection);
 static void Sound_DrawChoices(u8 selection);
 static u8 FrameType_ProcessInput(u8 selection);
@@ -130,6 +135,7 @@ static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
     [MENUITEM_FOLLOWER]        = gText_Follower,
     [MENUITEM_BATTLEMODE]      = gText_BattleMode,
     [MENUITEM_BATTLESPEED]     = gText_BattleSpeed,
+    [MENUITEM_EXPSHARE]        = gText_ExpShare,
     [MENUITEM_CANCEL_PG2]      = gText_OptionMenuCancel,
 };
 
@@ -207,6 +213,7 @@ static void ReadAllCurrentSettings(u8 taskId)
     gTasks[taskId].tFollower = FlagGet(FLAG_POKEMON_FOLLOWERS);
     gTasks[taskId].tBattleMode = gSaveBlock2Ptr->battleMode;
     gTasks[taskId].tBattleSpeed = gSaveBlock2Ptr->optionsBattleSpeed;
+    gTasks[taskId].tExpShare = FlagGet(FLAG_EXP_SHARE);
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -228,6 +235,7 @@ static void DrawOptionsPg2(u8 taskId)
     Follower_DrawChoices(gTasks[taskId].tFollower);
     BattleMode_DrawChoices(gTasks[taskId].tBattleMode);
     BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
+    ExpShare_DrawChoices(gTasks[taskId].tExpShare);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -536,6 +544,13 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
 
             if (previousOption != gTasks[taskId].tBattleSpeed)
                 BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
+            break;
+        case MENUITEM_EXPSHARE:
+            previousOption = gTasks[taskId].tExpShare;
+            gTasks[taskId].tExpShare = ExpShare_ProcessInput(gTasks[taskId].tExpShare);
+
+            if (previousOption != gTasks[taskId].tExpShare)
+                ExpShare_DrawChoices(gTasks[taskId].tExpShare);
             break; 
         default:
             return;
@@ -564,6 +579,11 @@ static void SaveCurrentSettings(u8 taskId)
         FlagClear(FLAG_POKEMON_FOLLOWERS);
     else
         FlagSet(FLAG_POKEMON_FOLLOWERS);
+    
+    if (gTasks[taskId].tExpShare == 0)
+        FlagClear(FLAG_EXP_SHARE);
+    else
+        FlagSet(FLAG_EXP_SHARE);
 }
 
 static void Task_OptionMenuSave(u8 taskId)
@@ -755,6 +775,27 @@ static void Follower_DrawChoices(u8 selection)
     styles[selection] = 1;
     DrawOptionMenuChoice(gText_FollowerShow, 104, YPOS_FOLLOWER, styles[0]);
     DrawOptionMenuChoice(gText_FollowerHide, GetStringRightAlignXOffset(FONT_NORMAL, gText_FollowerHide, 198), YPOS_FOLLOWER, styles[1]);
+}
+
+static u8 ExpShare_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+        sArrowPressed = TRUE;
+    }
+
+    return selection;
+}
+
+static void ExpShare_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;
+    DrawOptionMenuChoice(gText_ExpShareShare, 104, YPOS_EXPSHARE, styles[0]);
+    DrawOptionMenuChoice(gText_ExpShareSolo, GetStringRightAlignXOffset(FONT_NORMAL, gText_ExpShareSolo, 198), YPOS_EXPSHARE, styles[1]);
 }
 
 static u8 Sound_ProcessInput(u8 selection)

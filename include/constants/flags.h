@@ -1230,8 +1230,8 @@
 #define FLAG_INGAME_SCYTHER_TRADE                                   0x498 // Trade Scyther Flag
 #define FLAG_INGAME_ZANGOOSE_TRADE                                  0x499 // Trade Zangoose Flag
 #define FLAG_INGAME_MILOTIC_TRADE                                   0x49A // Trade Milotic Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
+#define FLAG_INGAME_DRATINI_TRADE                                   0x49B // Trade Dratini Flag
+#define FLAG_INGAME_LARVITAR_TRADE                                  0x49C // Trade Larvitar Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
@@ -1268,15 +1268,15 @@
 #define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
 #define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
 #define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_HIDE_MUM                                               0x4C1 // Mom appear in Playerhouse
-#define FLAG_HIDE_BIRCH_BAG_CAUGHT                                  0x4C2 // -> lets the bag disappear
-#define FLAG_HIDE_PROF                                              0x4C3 // Hide birch for funny scene
-#define FLAG_HIDE_PROF2                                             0x4C4 // Hide birch for funny scene
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
+#define FLAG_HIDE_MUM_M                                             0x4C1 // Mom appear in Playerhouse (MALE)
+#define FLAG_HIDE_BIRCH_BAG_CAUGHT_M                                0x4C2 // -> lets the bag disappear (MALE)
+#define FLAG_HIDE_PROF_M                                            0x4C3 // Hide birch for funny scene (MALE)
+#define FLAG_HIDE_PROF2_M                                           0x4C4 // Hide birch for funny scene (MALE)
+#define FLAG_HIDE_MUM_F                                             0x4C5 // Mom appear in Playerhouse (FEMALE)
+#define FLAG_HIDE_BIRCH_BAG_CAUGHT_F                                0x4C6 // > lets the bag disappear (FEMALE)
+#define FLAG_HIDE_PROF_F                                            0x4C7 // Hide birch for funny scene (FEMALE)
+#define FLAG_HIDE_PROF2_F                                           0x4C8 // Hide birch for funny scene (FEMALE)
+#define FLAG_RECEIVED_RANDOM_EGG                                    0x4C9 // Random egg recieved in pension
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
@@ -1314,7 +1314,7 @@
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_EXP_SHARE                                           0x4EF // ExpShare Flag
+#define FLAG_EXP_SHARE                                              0x4EF // ExpShare Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

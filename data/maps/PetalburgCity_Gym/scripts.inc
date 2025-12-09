@@ -379,10 +379,44 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setvar VAR_PETALBURG_GYM_STATE, 7
 	setflag FLAG_BADGE05_GET
-	@ clearflag FLAG_HIDE_MUM
-	@ clearflag FLAG_HIDE_PROF
-	@ setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
-	@ setvar VAR_PROF_AND_MUM_TRIGGER, 2
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, PetalburgCity_Gym_EventScript_NormanBattleMale
+	call_if_eq VAR_RESULT, FEMALE, PetalburgCity_Gym_EventScript_NormanBattleFemale
+	return
+
+PetalburgCity_Gym_EventScript_NormanBattleMale::
+	clearflag FLAG_HIDE_MUM_M
+	clearflag FLAG_HIDE_PROF_M
+	setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
+	setvar VAR_PROF_AND_MUM_TRIGGER_M, 2
+	special ResetHealLocationFromDewford
+	call EventScript_HideMrBriney
+	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
+	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
+	setvar VAR_0x8008, 5
+	call Common_EventScript_SetGymTrainers
+	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
+	call PetalburgCity_Gym_EventScript_UnlockAllDoors
+	special DrawWholeMapView
+	call PetalburgCity_Gym_EventScript_GiveFacade
+	delay 30
+	msgbox PetalburgCity_Gym_Text_DadHappyAndSad, MSGBOX_DEFAULT
+	closemessage
+	delay 40
+	playse SE_DOOR
+	delay 10
+	addobject LOCALID_PETALBURG_GYM_WALLYS_DAD
+	switch VAR_FACING
+	case DIR_NORTH, PetalburgCity_Gym_EventScript_WallysDadArrivesNorth
+	case DIR_WEST, PetalburgCity_Gym_EventScript_WallysDadArrivesWest
+	case DIR_EAST, PetalburgCity_Gym_EventScript_WallysDadArrivesEast
+	end
+
+PetalburgCity_Gym_EventScript_NormanBattleFemale::
+	clearflag FLAG_HIDE_MUM_F
+	clearflag FLAG_HIDE_PROF_F
+	setflag(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM)
+	setvar VAR_PROF_AND_MUM_TRIGGER_F, 2
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
@@ -1234,8 +1268,13 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 	.string "stronger.\p"
 	.string "One last thing..\n"
 	.string "Take this EXP SHARE.\p"
-	.string "You can toggle this to distribute the\n"
-	.string "EXP to all POKéMON in your party!$"
+	.string "A POKéMON holding that\n"
+	.string "EXP. SHARE will be given some of the\l"
+	.string "EXP Points from battle.\p"
+	.string "It will get EXP Points even if it didn't\n"
+	.string "actually battle.\p"
+	.string "I would say EXP. SHARE is quite useful\n"
+	.string "for raising weak POKéMON.$"
 
 PetalburgCity_Gym_Text_NormanGoToRustboro:
 	.string "DAD: Hm? Aren't you going to the\n"

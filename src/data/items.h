@@ -8879,6 +8879,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Amulet Coin"),
         .price = (I_PRICE >= GEN_9) ? 30000 : ((I_PRICE >= GEN_7) ? 10000 : 100),
+        .coinPrice = 3000,
         .holdEffect = HOLD_EFFECT_DOUBLE_PRIZE,
         .description = sLuckIncenseDesc,
         .pocket = POCKET_ITEMS,

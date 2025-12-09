@@ -108,6 +108,62 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY"
+    },
+    {
+      "local_id": "LOCALID_PLAYERS_HOUSE_1F_MOM_PROF_F",
+      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "x": 5,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse_1F_EventScript_MumCaught",
+      "flag": "FLAG_HIDE_MUM_F"
+    },
+    {
+      "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_BAG_F",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 4,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse_1F_EventScript_BirchStarterBag",
+      "flag": "FLAG_HIDE_BIRCH_BAG_CAUGHT_F"
+    },
+    {
+      "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_MOM_F",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 4,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse_1F_EventScript_Mom",
+      "flag": "FLAG_HIDE_PROF_F"
+    },
+    {
+      "local_id": "LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2_F",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 1,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_PROF2_F"
     }
   ],
   "warp_events": [
@@ -169,6 +225,69 @@
       "var": "VAR_LITTLEROOT_RIVAL_STATE",
       "var_value": "2",
       "script": "LittlerootTown_MaysHouse_1F_EventScript_MeetRival2"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER_F",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER_F",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER_F",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER_F",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER_F",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER_F",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PROF_AND_MUM_TRIGGER_F",
+      "var_value": "2",
+      "script": "Trigger_ProfAndMum"
     }
   ],
   "bg_events": []

@@ -3531,172 +3531,174 @@ CoinMart1:
 # 1773 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.2byte ITEM_ABILITY_PATCH
 # 1774 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_CATCHING_CHARM
+	.2byte ITEM_AMULET_COIN
 # 1775 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.2byte ITEM_CATCHING_CHARM
+# 1776 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.2byte ITEM_LUCKY_EGG
 	.2byte ITEM_NONE
 
 GameCorner_MartBalls::
-# 1779 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	lock
 # 1780 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	faceplayer
+	lock
 # 1781 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	faceplayer
+# 1782 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	message GameCorner_MartBalls_Text_0
-# 1787 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	waitmessage
 # 1788 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	coinmart CoinMartBalls
+	waitmessage
 # 1789 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	msgbox GameCorner_Mart1_Text_1
+	coinmart CoinMartBalls
 # 1790 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox GameCorner_Mart1_Text_1
+# 1791 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 1794 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-CoinMartBalls:
 # 1795 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_STRANGE_BALL
+CoinMartBalls:
 # 1796 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_STRANGE_BALL
 # 1797 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_NET_BALL
+	.2byte ITEM_HEAL_BALL
 # 1798 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_NEST_BALL
+	.2byte ITEM_NET_BALL
 # 1799 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NEST_BALL
 # 1800 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_DIVE_BALL
 # 1801 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_TIMER_BALL
+	.2byte ITEM_DUSK_BALL
 # 1802 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_QUICK_BALL
+	.2byte ITEM_TIMER_BALL
 # 1803 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_QUICK_BALL
 # 1804 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_REPEAT_BALL
 # 1805 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_LEVEL_BALL
+	.2byte ITEM_LUXURY_BALL
 # 1806 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_LURE_BALL
+	.2byte ITEM_LEVEL_BALL
 # 1807 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_MOON_BALL
+	.2byte ITEM_LURE_BALL
 # 1808 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_FRIEND_BALL
+	.2byte ITEM_MOON_BALL
 # 1809 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_LOVE_BALL
+	.2byte ITEM_FRIEND_BALL
 # 1810 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_FAST_BALL
+	.2byte ITEM_LOVE_BALL
 # 1811 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_HEAVY_BALL
+	.2byte ITEM_FAST_BALL
 # 1812 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_DREAM_BALL
+	.2byte ITEM_HEAVY_BALL
 # 1813 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_BEAST_BALL
+	.2byte ITEM_DREAM_BALL
 # 1814 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.2byte ITEM_BEAST_BALL
+# 1815 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.2byte ITEM_CHERISH_BALL
 	.2byte ITEM_NONE
 
 GameCorner_MartTM::
-# 1818 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	lock
 # 1819 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	faceplayer
+	lock
 # 1820 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	faceplayer
+# 1821 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	message GameCorner_MartTM_Text_0
-# 1824 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	waitmessage
 # 1825 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	coinmart CoinMartTM
+	waitmessage
 # 1826 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	msgbox GameCorner_Mart1_Text_1
+	coinmart CoinMartTM
 # 1827 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox GameCorner_Mart1_Text_1
+# 1828 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 1831 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-CoinMartTM:
 # 1832 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_TM_DOUBLE_TEAM
+CoinMartTM:
 # 1833 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_TM_PSYCHIC
+	.2byte ITEM_TM_DOUBLE_TEAM
 # 1834 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_TM_FLAMETHROWER
+	.2byte ITEM_TM_PSYCHIC
 # 1835 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_FLAMETHROWER
 # 1836 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.2byte ITEM_TM_THUNDERBOLT
+# 1837 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.2byte ITEM_TM_ICE_BEAM
 	.2byte ITEM_NONE
 
 GameCorner_MartHoldItems::
-# 1840 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	lock
 # 1841 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	faceplayer
+	lock
 # 1842 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	faceplayer
+# 1843 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	message GameCorner_Mart1_Text_0
-# 1846 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	waitmessage
 # 1847 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	coinmart CoinMartHoldItems
+	waitmessage
 # 1848 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	msgbox GameCorner_Mart1_Text_1
+	coinmart CoinMartHoldItems
 # 1849 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox GameCorner_Mart1_Text_1
+# 1850 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 1853 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-CoinMartHoldItems:
 # 1854 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_BLACK_BELT
+CoinMartHoldItems:
 # 1855 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_BLACK_GLASSES
+	.2byte ITEM_BLACK_BELT
 # 1856 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_CHARCOAL
+	.2byte ITEM_BLACK_GLASSES
 # 1857 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_CHARCOAL
 # 1858 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_HARD_STONE
+	.2byte ITEM_DRAGON_FANG
 # 1859 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_MAGNET
+	.2byte ITEM_HARD_STONE
 # 1860 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_METAL_COAT
+	.2byte ITEM_MAGNET
 # 1861 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_METAL_COAT
 # 1862 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_MIRACLE_SEED
 # 1863 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_MYSTIC_WATER
 # 1864 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_POISON_BARB
+	.2byte ITEM_NEVER_MELT_ICE
 # 1865 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_POISON_BARB
 # 1866 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_SHARP_BEAK
 # 1867 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_SILVER_POWDER
+	.2byte ITEM_SILK_SCARF
 # 1868 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_SILVER_POWDER
 # 1869 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	.2byte ITEM_SPELL_TAG
+	.2byte ITEM_SOFT_SAND
 # 1870 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.2byte ITEM_SPELL_TAG
+# 1871 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.2byte ITEM_TWISTED_SPOON
 	.2byte ITEM_NONE
 
 GameCorner_MeowthTalk::
-# 1874 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	lock
 # 1875 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	faceplayer
+	lock
 # 1876 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	faceplayer
+# 1877 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	msgbox GameCorner_MeowthTalk_Text_0
-# 1880 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+# 1881 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	release
 	end
 
@@ -3713,7 +3715,7 @@ GameCorner_Mart1_Text_1:
 	.string "Please Come Again.$"
 
 GameCorner_MartBalls_Text_0:
-# 1781 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+# 1782 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "Welcome!\p"
 	.string "You can exchange your COINS for\n"
 	.string "special Balls here.\p"
@@ -3722,14 +3724,14 @@ GameCorner_MartBalls_Text_0:
 	.string "How may I serve you?$"
 
 GameCorner_MartTM_Text_0:
-# 1820 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+# 1821 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "Welcome!\p"
 	.string "You can exchange your COINS for\n"
 	.string "TMs here.\p"
 	.string "How may I serve you?$"
 
 GameCorner_MeowthTalk_Text_0:
-# 1876 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+# 1877 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "It is Pay Day time!\p"
 	.string "Cough.. Cough..\p"
 	.string "I mean..\p"
