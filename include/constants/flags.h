@@ -87,10 +87,10 @@
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_FORCE_SHINY    0x4D // Makes the game force a Mon being Shiny
-#define FLAG_FORCE_NO_SHINY    0x4E // Unused Flag
-#define FLAG_SHINY_GYARADOS_R134    0x4F // Unused Flag
+#define FLAG_SHINY_GYARADOS_R134    0x4C // Used to make ow Gyarados disappear
+#define FLAG_HIDE_MEWTWO    0x4D // Used to make ow Mewtwo disappear
+#define FLAG_FORCE_NO_SHINY 0x4E // Makes the game force Pokemon not being shiny until flag cleared
+#define FLAG_FORCE_SHINY    0x4F // Makes the game force a Mon being Shiny
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50

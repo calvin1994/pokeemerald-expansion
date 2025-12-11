@@ -1171,3 +1171,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+
+	.include "data/maps/Cerulean_Cave/scripts.inc"
+
+	.include "data/maps/Cerulean_Cave_F1/scripts.inc"
+
+	.include "data/maps/Cerulean_Cave_F2/scripts.inc"
+
+	.include "data/maps/Cerulean_Cave_BF1/scripts.inc"

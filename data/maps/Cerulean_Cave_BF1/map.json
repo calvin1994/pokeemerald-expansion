@@ -1,0 +1,42 @@
+{
+  "id": "MAP_CERULEAN_CAVE_BF1",
+  "name": "Cerulean_Cave_BF1",
+  "layout": "LAYOUT_CERULEAN_CAVE_BF1",
+  "music": "MUS_CAVE_OF_ORIGIN",
+  "region_map_section": "MAPSEC_CERULEAN_CAVE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MEWTWO)",
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Cerulean_Cave_BF1_EventScript_Mewtwo",
+      "flag": "FLAG_HIDE_MEWTWO"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CERULEAN_CAVE_F1",
+      "dest_warp_id": "6"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

@@ -769,6 +769,7 @@ if(var(VAR_RESULT) == MALE){
 	setflag (FLAG_HIDE_PROF_M)
 	clearflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM)
 	release   
+
 } else {
 	lock
     callnative(StartNewPokeballCaseUI)

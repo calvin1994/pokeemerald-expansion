@@ -1505,47 +1505,47 @@ PlayersHouse_1F_EventScript_BirchStarterBag::
 # 750 "data/scripts/players_house.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq PlayersHouse_1F_EventScript_BirchStarterBag_1
-# 773 "data/scripts/players_house.pory"
-	lock
 # 774 "data/scripts/players_house.pory"
-	callnative StartNewPokeballCaseUI
+	lock
 # 775 "data/scripts/players_house.pory"
-	waitstate
+	callnative StartNewPokeballCaseUI
 # 776 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayerToRight
+	waitstate
 # 777 "data/scripts/players_house.pory"
-	playse SE_DOOR
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerToRight
 # 778 "data/scripts/players_house.pory"
-	addobject 11
+	playse SE_DOOR
 # 779 "data/scripts/players_house.pory"
-	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2_F, ProfMoves2_F
+	addobject 11
 # 780 "data/scripts/players_house.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2_F, ProfMoves2_F
 # 781 "data/scripts/players_house.pory"
-	removeobject 9
+	waitmovement 0
 # 782 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_EventScript_BirchStarterBag_Text_0
+	removeobject 9
 # 783 "data/scripts/players_house.pory"
-	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves3_F
+	msgbox PlayersHouse_1F_EventScript_BirchStarterBag_Text_0
 # 784 "data/scripts/players_house.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves3_F
 # 785 "data/scripts/players_house.pory"
-	removeobject 11
-# 786 "data/scripts/players_house.pory"
-	playse SE_EXIT
-# 787 "data/scripts/players_house.pory"
-	closemessage
-# 788 "data/scripts/players_house.pory"
-	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM_PROF_F, MomMoves_F
-# 789 "data/scripts/players_house.pory"
 	waitmovement 0
+# 786 "data/scripts/players_house.pory"
+	removeobject 11
+# 787 "data/scripts/players_house.pory"
+	playse SE_EXIT
+# 788 "data/scripts/players_house.pory"
+	closemessage
+# 789 "data/scripts/players_house.pory"
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM_PROF_F, MomMoves_F
 # 790 "data/scripts/players_house.pory"
-	setflag FLAG_HIDE_MUM_F
+	waitmovement 0
 # 791 "data/scripts/players_house.pory"
-	setflag FLAG_HIDE_PROF_F
+	setflag FLAG_HIDE_MUM_F
 # 792 "data/scripts/players_house.pory"
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM
+	setflag FLAG_HIDE_PROF_F
 # 793 "data/scripts/players_house.pory"
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM
+# 794 "data/scripts/players_house.pory"
 	release
 	return
 
@@ -1595,143 +1595,143 @@ PlayersHouse_1F_EventScript_BirchStarterBag_1:
 	return
 
 
-# 797 "data/scripts/players_house.pory"
+# 798 "data/scripts/players_house.pory"
 PlayerToLeft:
-# 798 "data/scripts/players_house.pory"
-	walk_right
-# 798 "data/scripts/players_house.pory"
+# 799 "data/scripts/players_house.pory"
 	walk_right
 # 799 "data/scripts/players_house.pory"
+	walk_right
+# 800 "data/scripts/players_house.pory"
 	face_left
 	step_end
 
-# 802 "data/scripts/players_house.pory"
+# 803 "data/scripts/players_house.pory"
 PlayerToRight:
-# 803 "data/scripts/players_house.pory"
-	walk_left
-# 803 "data/scripts/players_house.pory"
+# 804 "data/scripts/players_house.pory"
 	walk_left
 # 804 "data/scripts/players_house.pory"
+	walk_left
+# 805 "data/scripts/players_house.pory"
 	face_right
 	step_end
 
-# 807 "data/scripts/players_house.pory"
+# 808 "data/scripts/players_house.pory"
 MomMoves:
-# 808 "data/scripts/players_house.pory"
-	walk_down
-# 808 "data/scripts/players_house.pory"
-	walk_down
-# 808 "data/scripts/players_house.pory"
+# 809 "data/scripts/players_house.pory"
 	walk_down
 # 809 "data/scripts/players_house.pory"
-	walk_left
+	walk_down
 # 809 "data/scripts/players_house.pory"
-	walk_left
-# 809 "data/scripts/players_house.pory"
+	walk_down
+# 810 "data/scripts/players_house.pory"
 	walk_left
 # 810 "data/scripts/players_house.pory"
-	walk_down
+	walk_left
+# 810 "data/scripts/players_house.pory"
+	walk_left
 # 811 "data/scripts/players_house.pory"
+	walk_down
+# 812 "data/scripts/players_house.pory"
 	face_right
 	step_end
 
-# 814 "data/scripts/players_house.pory"
+# 815 "data/scripts/players_house.pory"
 MomMoves_F:
-# 815 "data/scripts/players_house.pory"
-	walk_down
-# 815 "data/scripts/players_house.pory"
-	walk_down
-# 815 "data/scripts/players_house.pory"
+# 816 "data/scripts/players_house.pory"
 	walk_down
 # 816 "data/scripts/players_house.pory"
-	walk_right
+	walk_down
 # 816 "data/scripts/players_house.pory"
-	walk_right
-# 816 "data/scripts/players_house.pory"
+	walk_down
+# 817 "data/scripts/players_house.pory"
 	walk_right
 # 817 "data/scripts/players_house.pory"
-	walk_down
+	walk_right
+# 817 "data/scripts/players_house.pory"
+	walk_right
 # 818 "data/scripts/players_house.pory"
+	walk_down
+# 819 "data/scripts/players_house.pory"
 	face_left
 	step_end
 
-# 821 "data/scripts/players_house.pory"
+# 822 "data/scripts/players_house.pory"
 ProfMoves2:
-# 822 "data/scripts/players_house.pory"
-	walk_up
-# 822 "data/scripts/players_house.pory"
-	walk_up
-# 822 "data/scripts/players_house.pory"
-	walk_up
-# 822 "data/scripts/players_house.pory"
+# 823 "data/scripts/players_house.pory"
 	walk_up
 # 823 "data/scripts/players_house.pory"
-	walk_left
+	walk_up
 # 823 "data/scripts/players_house.pory"
-	walk_left
+	walk_up
 # 823 "data/scripts/players_house.pory"
+	walk_up
+# 824 "data/scripts/players_house.pory"
 	walk_left
 # 824 "data/scripts/players_house.pory"
+	walk_left
+# 824 "data/scripts/players_house.pory"
+	walk_left
+# 825 "data/scripts/players_house.pory"
 	walk_up
 	step_end
 
-# 827 "data/scripts/players_house.pory"
+# 828 "data/scripts/players_house.pory"
 ProfMoves2_F:
-# 828 "data/scripts/players_house.pory"
-	walk_up
-# 828 "data/scripts/players_house.pory"
-	walk_up
-# 828 "data/scripts/players_house.pory"
-	walk_up
-# 828 "data/scripts/players_house.pory"
+# 829 "data/scripts/players_house.pory"
 	walk_up
 # 829 "data/scripts/players_house.pory"
-	walk_right
+	walk_up
 # 829 "data/scripts/players_house.pory"
-	walk_right
+	walk_up
 # 829 "data/scripts/players_house.pory"
+	walk_up
+# 830 "data/scripts/players_house.pory"
 	walk_right
 # 830 "data/scripts/players_house.pory"
+	walk_right
+# 830 "data/scripts/players_house.pory"
+	walk_right
+# 831 "data/scripts/players_house.pory"
 	walk_up
 	step_end
 
-# 833 "data/scripts/players_house.pory"
-ProfMoves3:
 # 834 "data/scripts/players_house.pory"
+ProfMoves3:
+# 835 "data/scripts/players_house.pory"
 	walk_down
-# 835 "data/scripts/players_house.pory"
-	walk_right
-# 835 "data/scripts/players_house.pory"
-	walk_right
-# 835 "data/scripts/players_house.pory"
+# 836 "data/scripts/players_house.pory"
 	walk_right
 # 836 "data/scripts/players_house.pory"
-	walk_down
+	walk_right
 # 836 "data/scripts/players_house.pory"
+	walk_right
+# 837 "data/scripts/players_house.pory"
 	walk_down
-# 836 "data/scripts/players_house.pory"
+# 837 "data/scripts/players_house.pory"
 	walk_down
-# 836 "data/scripts/players_house.pory"
+# 837 "data/scripts/players_house.pory"
+	walk_down
+# 837 "data/scripts/players_house.pory"
 	walk_down
 	step_end
 
-# 839 "data/scripts/players_house.pory"
-ProfMoves3_F:
 # 840 "data/scripts/players_house.pory"
+ProfMoves3_F:
+# 841 "data/scripts/players_house.pory"
 	walk_down
-# 841 "data/scripts/players_house.pory"
-	walk_left
-# 841 "data/scripts/players_house.pory"
-	walk_left
-# 841 "data/scripts/players_house.pory"
+# 842 "data/scripts/players_house.pory"
 	walk_left
 # 842 "data/scripts/players_house.pory"
-	walk_down
+	walk_left
 # 842 "data/scripts/players_house.pory"
+	walk_left
+# 843 "data/scripts/players_house.pory"
 	walk_down
-# 842 "data/scripts/players_house.pory"
+# 843 "data/scripts/players_house.pory"
 	walk_down
-# 842 "data/scripts/players_house.pory"
+# 843 "data/scripts/players_house.pory"
+	walk_down
+# 843 "data/scripts/players_house.pory"
 	walk_down
 	step_end
 

@@ -4410,6 +4410,46 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CAVE",
+      "name": "Cerulean_Cave_Layout",
+      "width": 16,
+      "height": 21,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Cerulean_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Cerulean_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CAVE_F1",
+      "name": "Cerulean_Cave_F1_Layout",
+      "width": 40,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Cerulean_Cave_F1/border.bin",
+      "blockdata_filepath": "data/layouts/Cerulean_Cave_F1/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CAVE_F2",
+      "name": "Cerulean_Cave_F2_Layout",
+      "width": 34,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Cerulean_Cave_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Cerulean_Cave_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CAVE_BF1",
+      "name": "Cerulean_Cave_BF1_Layout",
+      "width": 40,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Cerulean_Cave_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/Cerulean_Cave_BF1/map.bin"
     }
   ]
 }
