@@ -3698,7 +3698,13 @@ GameCorner_MeowthTalk::
 	faceplayer
 # 1877 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	msgbox GameCorner_MeowthTalk_Text_0
+# 1880 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	waitmessage
 # 1881 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playmoncry SPECIES_MEOWTH, CRY_MODE_NORMAL
+# 1882 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox GameCorner_MeowthTalk_Text_1
+# 1883 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	release
 	end
 
@@ -3734,5 +3740,8 @@ GameCorner_MeowthTalk_Text_0:
 # 1877 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "It is Pay Day time!\p"
 	.string "Cough.. Cough..\p"
-	.string "I mean..\p"
+	.string "I mean..$"
+
+GameCorner_MeowthTalk_Text_1:
+# 1882 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "Meowth!$"

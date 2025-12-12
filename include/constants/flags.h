@@ -84,11 +84,11 @@
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    0x47 // Unused Flag
 #define FLAG_UNUSED_0x048    0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
+#define FLAG_HIDE_ESPEON     0x49 // Used to make ow Espeon disappear
+#define FLAG_HIDE_UMBREON    0x4A // Used to make ow Umbreon disappear
+#define FLAG_HIDE_LAPRAS_VIC 0x4B // Used to make ow Lapras disappear
 #define FLAG_SHINY_GYARADOS_R134    0x4C // Used to make ow Gyarados disappear
-#define FLAG_HIDE_MEWTWO    0x4D // Used to make ow Mewtwo disappear
+#define FLAG_HIDE_MEWTWO_CAVE    0x4D // Used to make ow Mewtwo disappear
 #define FLAG_FORCE_NO_SHINY 0x4E // Makes the game force Pokemon not being shiny until flag cleared
 #define FLAG_FORCE_SHINY    0x4F // Makes the game force a Mon being Shiny
 
@@ -1241,7 +1241,7 @@
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
+#define FLAG_RECEIVED_EEVEE                                         0x4A6 // Eevee gift can only be obtained once
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
@@ -1276,7 +1276,7 @@
 #define FLAG_HIDE_BIRCH_BAG_CAUGHT_F                                0x4C6 // > lets the bag disappear (FEMALE)
 #define FLAG_HIDE_PROF_F                                            0x4C7 // Hide birch for funny scene (FEMALE)
 #define FLAG_HIDE_PROF2_F                                           0x4C8 // Hide birch for funny scene (FEMALE)
-#define FLAG_RECEIVED_RANDOM_EGG                                    0x4C9 // Random egg recieved in pension
+#define FLAG_UNUSED_0x4C9                                           0x4C9 // Random egg recieved in pension
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag

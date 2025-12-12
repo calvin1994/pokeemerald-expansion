@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_CERULEAN_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_UNKNOWN",
   "allow_cycling": true,
   "allow_escaping": true,
   "allow_running": true,
@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Cerulean_Cave_BF1_EventScript_Mewtwo",
-      "flag": "FLAG_HIDE_MEWTWO"
+      "flag": "FLAG_HIDE_MEWTWO_CAVE"
     }
   ],
   "warp_events": [

@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_CERULEAN_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_UNKNOWN",
   "allow_cycling": true,
   "allow_escaping": true,
   "allow_running": true,
@@ -68,7 +68,7 @@
       "x": 33,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CAVE",
+      "dest_map": "MAP_CERULEAN_ISLAND",
       "dest_warp_id": "0"
     }
   ],

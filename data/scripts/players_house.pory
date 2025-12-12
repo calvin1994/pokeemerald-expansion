@@ -739,7 +739,7 @@ movement ProfMoves_F {
 script PlayersHouse_1F_EventScript_MumCaught {
     lock
 	faceplayer
-    msgbox("Oh honey...\p"
+    msgbox("Oh honey…\p"
     "Please forget what you just saw!")
     release
     end
@@ -757,7 +757,7 @@ if(var(VAR_RESULT) == MALE){
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves2)
 	waitmovement(0)
 	removeobject(9)
-	msgbox("Let me get my bag real quick.")
+	msgbox("Let me get my bag real quick…")
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves3)
 	waitmovement(0)
 	removeobject(11)
@@ -780,7 +780,7 @@ if(var(VAR_RESULT) == MALE){
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2_F, ProfMoves2_F)
 	waitmovement(0)
 	removeobject(9)
-	msgbox("Let me get my bag real quick.")
+	msgbox("Let me get my bag real quick…")
 	applymovement(LOCALID_PLAYERS_HOUSE_1F_PROF_MOM2, ProfMoves3_F)
 	waitmovement(0)
 	removeobject(11)

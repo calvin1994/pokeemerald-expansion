@@ -1741,9 +1741,9 @@ Trigger_ProfAndMum_Text_0:
 
 PlayersHouse_1F_EventScript_MumCaught_Text_0:
 # 742 "data/scripts/players_house.pory"
-	.string "Oh honey...\p"
+	.string "Oh honey…\p"
 	.string "Please forget what you just saw!$"
 
 PlayersHouse_1F_EventScript_BirchStarterBag_Text_0:
 # 760 "data/scripts/players_house.pory"
-	.string "Let me get my bag real quick.$"
+	.string "Let me get my bag real quick…$"

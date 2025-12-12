@@ -1,5 +1,8 @@
 raw `
 Route117_PokemonDayCare_MapScripts::
+
+.set RAND_EGG_PRICE, 5000
+
 	map_script MAP_SCRIPT_ON_TRANSITION, Route117_PokemonDayCare_OnTransition
 	.byte 0
 
@@ -11,93 +14,89 @@ Route117_PokemonDayCare_OnTransition:
 `
 
 script Route117_PokemonDayCare_RandEggGiver {
-    if (flag(FLAG_RECEIVED_RANDOM_EGG)) {
+
+    // Voraussetzung: beide Flags müssen TRUE sein
+    if (!flag(FLAG_BADGE04_GET)){
+        lock
+        faceplayer
+        msgbox("I have found so many eggs!\p"
+           "I am too old taking care of them…\p"
+           "But I do not feel a strong bond between\n"
+           "you and your POKéMON…\p"
+           "So… I can't entrust it to your care with\n"
+           "a clear conscience.\p"
+           "Come visit me again, when you have beaten\n"
+           "FLANNERY in LAVARIDGE TOWN!")
+        releaseall
+        end
+    }
+
     lock
     faceplayer
-    msgbox("Thank you for taking the responsibility!")
-    releaseall
-    } else {
-    lock
-	faceplayer
-    msgbox("I have found this egg but I am too\n"
-    "old taking care of it…\p"
-    "I feel a strong bond between you and \n"
-    "your POKéMON!\p"
-    "So… I can entrust it to your care with a \n"
-    "clear conscience.\p"
-    "Would you mind taking it into your care?", MSGBOX_YESNO)
-    if(var(VAR_RESULT) == YES)
+
+    msgbox("I have found so many eggs but I am\n"
+           "too old taking care of them…\p"
+           "I feel a strong bond between you and\n"
+           "your POKéMON!\p"
+           "So… I can entrust it to your care with a\n"
+           "clear conscience.")
+    waitmessage
+    showmoneybox(0,0)
+    msgbox("Would you mind taking one of them into\n"
+           "your care for 5.000¥?", MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES)
     {
+        checkmoney(RAND_EGG_PRICE)
+        if (var(VAR_RESULT) == FALSE)
+        {
+            msgbox("You don't have enough money…")
+            hidemoneybox
+            releaseall
+            end
+        }
+
         getpartysize
-        if(var(VAR_RESULT) == PARTY_SIZE){
+        if (var(VAR_RESULT) == PARTY_SIZE)
+        {
             msgbox("Oh? You've too many POKéMON.\n"
-            "There's no room for this EGG…")
+                   "There's no room for this EGG…")
+            hidemoneybox
             releaseall
-        } else {
-            msgbox("Take it then…")
-            setflag(FLAG_RECEIVED_RANDOM_EGG)
-            playfanfare (MUS_OBTAIN_ITEM)
-            msgbox("{PLAYER} recieved the EGG!")
-            waitfanfare
-            random(16)   // 16 mögliche Pokémon
-            switch (var(VAR_RESULT)) {
-                case 0:
-                    setvar(VAR_TEMP_0, SPECIES_CLEFFA)
-                    break
-                case 1:
-                    setvar(VAR_TEMP_0, SPECIES_ELEKID)
-                    break
-                case 2:
-                    setvar(VAR_TEMP_0, SPECIES_MAGBY)
-                    break
-                case 3:
-                    setvar(VAR_TEMP_0, SPECIES_TYROGUE)
-                    break
-                case 4:
-                    setvar(VAR_TEMP_0, SPECIES_SMOOCHUM)
-                    break
-                case 5:
-                    setvar(VAR_TEMP_0, SPECIES_TOGEPI)
-                    break
-                case 6:
-                    setvar(VAR_TEMP_0, SPECIES_MUNCHLAX)
-                    break
-                case 7:
-                    setvar(VAR_TEMP_0, SPECIES_HAPPINY)
-                    break
-                case 8:
-                    setvar(VAR_TEMP_0, SPECIES_MIME_JR)
-                    break
-                case 9:
-                    setvar(VAR_TEMP_0, SPECIES_MANTYKE)
-                    break
-                case 10:
-                    setvar(VAR_TEMP_0, SPECIES_BONSLY)
-                    break
-                case 11:
-                    setvar(VAR_TEMP_0, SPECIES_PICHU)
-                    break
-                case 12:
-                    setvar(VAR_TEMP_0, SPECIES_CLEFFA)
-                    break
-                case 13:
-                    setvar(VAR_TEMP_0, SPECIES_AZURILL)
-                    break
-                case 14:
-                    setvar(VAR_TEMP_0, SPECIES_CHINGLING)
-                    break
-                case 15:
-                    setvar(VAR_TEMP_0, SPECIES_BUDEW)
-                    break
-            }
-            giveegg(VAR_TEMP_0)
-            releaseall
+            end
         }
-    }
-    else {
-    msgbox("I hope someone else will relieve me \n"
-    "of this responsibility…")
-    releaseall 
+
+        playse(SE_SHOP)
+        removemoney(RAND_EGG_PRICE)
+        updatemoneybox 
+        msgbox("Take it then…")
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("{PLAYER} received one EGG!")
+        waitfanfare
+        hidemoneybox
+        random(16)
+        switch (var(VAR_RESULT)) {
+            case 0:  setvar(VAR_TEMP_0, SPECIES_CLEFFA) break
+            case 1:  setvar(VAR_TEMP_0, SPECIES_ELEKID) break
+            case 2:  setvar(VAR_TEMP_0, SPECIES_MAGBY) break
+            case 3:  setvar(VAR_TEMP_0, SPECIES_TYROGUE) break
+            case 4:  setvar(VAR_TEMP_0, SPECIES_SMOOCHUM) break
+            case 5:  setvar(VAR_TEMP_0, SPECIES_TOGEPI) break
+            case 6:  setvar(VAR_TEMP_0, SPECIES_MUNCHLAX) break
+            case 7:  setvar(VAR_TEMP_0, SPECIES_HAPPINY) break
+            case 8:  setvar(VAR_TEMP_0, SPECIES_MIME_JR) break
+            case 9:  setvar(VAR_TEMP_0, SPECIES_MANTYKE) break
+            case 10: setvar(VAR_TEMP_0, SPECIES_BONSLY) break
+            case 11: setvar(VAR_TEMP_0, SPECIES_PICHU) break
+            case 12: setvar(VAR_TEMP_0, SPECIES_AZURILL) break
+            case 13: setvar(VAR_TEMP_0, SPECIES_CHINGLING) break
+            case 14: setvar(VAR_TEMP_0, SPECIES_BUDEW) break
+            case 15: setvar(VAR_TEMP_0, SPECIES_CLEFFA) break
         }
+        giveegg(VAR_TEMP_0)
     }
+    msgbox("Come back if you change your mind!")
+    hidemoneybox
+    releaseall
+    end
 }

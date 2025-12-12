@@ -13135,24 +13135,6 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_OldSeaMap,
     },
 
-    [ITEM_CERULEAN_TICKET] =
-    {
-        .name = ITEM_NAME("Cerulean Ticket"),
-        .price = 0,
-        .bpPrice = 500,
-        .description = COMPOUND_STRING(
-            "The ticket for a\n"
-            "ferry to a distant\n"
-            "dangerous cave."),
-        .importance = 1,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 1,
-        .iconPic = gItemIcon_EonTicket,
-        .iconPalette = gItemIconPalette_EonTicket,
-    },
-
     [ITEM_LETTER] =
     {
         .name = ITEM_NAME("Letter"),

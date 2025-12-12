@@ -8,7 +8,7 @@ script Cerulean_Cave_BF1_EventScript_Mewtwo {
 	delay(40)
 	waitmoncry
 	setwildbattle(SPECIES_MEWTWO, 70, ITEM_NONE)
-	special (BattleSetup_StartLegendaryBattle)
+	dowildbattle
 	specialvar(VAR_RESULT, GetBattleOutcome)
 	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
 		call(Won_or_Caught_Mewtwo)
@@ -41,7 +41,7 @@ script RanAway_Mewtwo {
 }
 
 script Lost_Battle_Mewtwo {
-    setflag(FLAG_HIDE_MEWTWO)
+    setflag(FLAG_HIDE_MEWTWO_CAVE)
 	playmoncry(SPECIES_MEWTWO, CRY_MODE_ENCOUNTER)
 	delay(20)
 	return

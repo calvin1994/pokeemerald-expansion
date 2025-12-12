@@ -1003,11 +1003,10 @@
 #define ITEM_WATERFALL_TOOL 835
 #define ITEM_DIVE_TOOL 836 // field items end
 
-#define ITEM_CERULEAN_TICKET 837
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 838
+#define ITEMS_COUNT 837
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

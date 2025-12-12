@@ -1876,8 +1876,10 @@ script GameCorner_MeowthTalk{
 	faceplayer
     msgbox("It is Pay Day time!\p"
     "Cough.. Cough..\p"
-	"I mean..\p"
-	"Meowth!")
+	"I mean..")
+	waitmessage
+	playmoncry(SPECIES_MEOWTH, CRY_MODE_NORMAL)
+	msgbox("Meowth!")
     release
     end
 }
