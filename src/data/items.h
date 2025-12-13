@@ -13070,7 +13070,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Eon Ticket"),
         .price = 0,
-        .bpPrice = 500,
+        .bpPrice = 100,
         .description = COMPOUND_STRING(
             "The ticket for a\n"
             "ferry to a distant\n"
@@ -13088,7 +13088,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Mystic Ticket"),
         .price = 0,
-        .bpPrice = 500,
+        .bpPrice = 100,
         .description = COMPOUND_STRING(
             "A ticket required\n"
             "to board the ship\n"
@@ -13105,7 +13105,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Aurora Ticket"),
         .price = 0,
-        .bpPrice = 500,
+        .bpPrice = 100,
         .description = COMPOUND_STRING(
             "A ticket required\n"
             "to board the ship\n"
@@ -13122,7 +13122,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Old Sea Map"),
         .price = 0,
-        .bpPrice = 500,
+        .bpPrice = 100,
         .description = COMPOUND_STRING(
             "A faded sea chart\n"
             "that shows the way\n"
