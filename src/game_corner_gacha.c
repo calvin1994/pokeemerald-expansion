@@ -1627,6 +1627,8 @@ static void CreateKnob(void)
     gSprites[sGacha->KnobSpriteId].animNum = 0; // No Rotation
 }
 
+// ======================================== COMMON ========================================
+
 static const u16 sGachaBasicSpeciesCommon[] = {
     SPECIES_SUNKERN,
     SPECIES_AZURILL,
@@ -1730,6 +1732,8 @@ static const u16 sGachaBasicSpeciesUltraRare[] = {
     SPECIES_CHIKORITA,
     SPECIES_SHUCKLE
 };
+
+// ======================================== GREAT ========================================
 
 static const u16 sGachaGreatSpeciesCommon[] = {
     SPECIES_JIGGLYPUFF,
@@ -1919,6 +1923,8 @@ static const u16 sGachaGreatSpeciesUltraRare[] = {
     SPECIES_HERACROSS
 };
 
+// ======================================== ULTRA ========================================
+
 static const u16 sGachaUltraSpeciesCommon[] = {
     SPECIES_KRABBY,
     SPECIES_EXEGGCUTE,
@@ -2100,6 +2106,8 @@ static const u16 sGachaUltraSpeciesUltraRare[] = {
     SPECIES_METAGROSS,
     SPECIES_SLAKING
 };
+
+// ======================================== MASTER ========================================
 
 static const u16 sGachaMasterSpeciesCommon[] = {
     SPECIES_DITTO,

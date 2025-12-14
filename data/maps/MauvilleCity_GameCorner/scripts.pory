@@ -1883,3 +1883,165 @@ script GameCorner_MeowthTalk{
     release
     end
 }
+
+
+script MauvilleCity_GameCorner_EventScript_PokemonVendor
+{
+    lock
+    faceplayer
+    checkitem(ITEM_COIN_CASE, 1)
+    if (var(VAR_RESULT) == FALSE) {
+        msgbox("You don't have the Coin Case yet")
+        releaseall
+		end
+    }
+
+    msgbox("You can exchange your Coins for\n"
+		   "POKéMON here!\p"
+		   "Do you want to check my offer?", MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == NO) {
+	msgbox("Come back if you've changed your mind!")
+	releaseall
+	end
+
+	}
+    showcoinsbox(1, 1)
+    dynmultichoice(12, 0, TRUE, 6, 0, DYN_MULTICHOICE_CB_NONE,
+        "Abra       120 Coins", 
+		"Pikachu    2222 Coins", 
+		"Eevee      6666 Coins", 
+		"Porygon    9999 Coins", 
+		"Exit")
+
+    if (var(VAR_RESULT) == 4) { // Exit
+        hidecoinsbox(1, 1)
+        releaseall
+    }
+
+    // Preise definieren
+    if (var(VAR_RESULT) == 0) { // Abra
+	     getpartysize
+        if (var(VAR_RESULT) == PARTY_SIZE)
+        {
+            msgbox("Oh? You've too many POKéMON.\n"
+                   "There's no room for this one")
+            hidecoinsbox(1, 1)
+            releaseall
+            end
+        }
+        checkcoins(VAR_TEMP_0)
+        if (var(VAR_TEMP_0) >= 120) {
+            removecoins(120)
+            updatecoinsbox(1, 1)
+            playse(SE_SHOP)
+            delay(40)
+			givemon(SPECIES_ABRA,15)
+			playfanfare(MUS_OBTAIN_ITEM)
+			msgbox("{PLAYER} received Abra!")
+			waitfanfare
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+            
+        } else {
+            msgbox("You don't have enough coins!")
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+        }
+    }
+
+    if (var(VAR_RESULT) == 1) { // Pikachu
+		getpartysize
+        if (var(VAR_RESULT) == PARTY_SIZE)
+        {
+            msgbox("Oh? You've too many POKéMON.\n"
+                   "There's no room for this one")
+            hidecoinsbox(1, 1)
+            releaseall
+            end
+        }
+        checkcoins(VAR_TEMP_0)
+        if (var(VAR_TEMP_0) >= 2222) {
+            removecoins(2222)
+            updatecoinsbox(1, 1)
+            playse(SE_SHOP)
+            delay(40)
+			givemon(SPECIES_PIKACHU_HOENN,15)
+			playfanfare(MUS_OBTAIN_ITEM)
+			msgbox("{PLAYER} received Pikachu!")
+			waitfanfare
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+        } else {
+            msgbox("You don't have enough coins!")
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+        }
+    }
+
+    if (var(VAR_RESULT) == 2) { // Eevee
+		getpartysize
+        if (var(VAR_RESULT) == PARTY_SIZE)
+        {
+            msgbox("Oh? You've too many POKéMON.\n"
+                   "There's no room for this one")
+            hidecoinsbox(1, 1)
+            releaseall
+            end
+        }
+        checkcoins(VAR_TEMP_0)
+        if (var(VAR_TEMP_0) >= 6666) {
+            removecoins(6666)
+            updatecoinsbox(1, 1)
+            playse(SE_SHOP)
+            delay(40)
+			givemon(SPECIES_EEVEE,15)
+			playfanfare(MUS_OBTAIN_ITEM)
+			msgbox("{PLAYER} received Eevee!")
+			waitfanfare
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+        } else {
+            msgbox("You don't have enough coins!")
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+        }
+    }
+
+    if (var(VAR_RESULT) == 3) { // Porygon
+		getpartysize
+        if (var(VAR_RESULT) == PARTY_SIZE)
+        {
+            msgbox("Oh? You've too many POKéMON.\n"
+                   "There's no room for this one")
+            hidecoinsbox(1, 1)
+            releaseall
+            end
+        }
+        checkcoins(VAR_TEMP_0)
+        if (var(VAR_TEMP_0) >= 9999) {
+            removecoins(9999)
+            updatecoinsbox(1, 1)
+            playse(SE_SHOP)
+            delay(40)
+			givemon(SPECIES_PORYGON,15)
+			playfanfare(MUS_OBTAIN_ITEM)
+			msgbox("{PLAYER} received Porygon!")
+			waitfanfare
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+        } else {
+            msgbox("You don't have enough coins!")
+			hidecoinsbox(1, 1)
+			releaseall
+			end
+        }
+    }
+}

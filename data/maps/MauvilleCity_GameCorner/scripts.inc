@@ -3709,6 +3709,269 @@ GameCorner_MeowthTalk::
 	end
 
 
+MauvilleCity_GameCorner_EventScript_PokemonVendor::
+# 1890 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	lock
+# 1891 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	faceplayer
+# 1892 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	checkitem ITEM_COIN_CASE, 1
+# 1893 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_2
+# 1899 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_1, MSGBOX_YESNO
+# 1903 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_5
+# 1909 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	showcoinsbox 1, 1
+# 1910 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	dynmultichoice 12, 0, TRUE, 6, 0, DYN_MULTICHOICE_CB_NONE, MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_3, MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_4, MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_5, MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_6, MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_7
+# 1917 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_8
+MauvilleCity_GameCorner_EventScript_PokemonVendor_7:
+# 1923 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_11
+# 1955 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_14
+# 1986 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_20
+# 2017 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_28
+	return
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_2:
+# 1894 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_0
+# 1895 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_5:
+# 1904 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_2
+# 1905 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_8:
+# 1918 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1919 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	goto MauvilleCity_GameCorner_EventScript_PokemonVendor_7
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_11:
+# 1924 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	getpartysize
+# 1925 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_17
+# 1933 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	checkcoins VAR_TEMP_0
+# 1934 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_TEMP_0, 120
+	goto_if_ge MauvilleCity_GameCorner_EventScript_PokemonVendor_25
+# 1948 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_10
+# 1949 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1950 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_14:
+# 1956 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	getpartysize
+# 1957 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_23
+# 1965 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	checkcoins VAR_TEMP_0
+# 1966 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_TEMP_0, 2222
+	goto_if_ge MauvilleCity_GameCorner_EventScript_PokemonVendor_33
+# 1979 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_10
+# 1980 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1981 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_17:
+# 1927 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_8
+# 1929 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1930 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_20:
+# 1987 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	getpartysize
+# 1988 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_31
+# 1996 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	checkcoins VAR_TEMP_0
+# 1997 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_TEMP_0, 6666
+	goto_if_ge MauvilleCity_GameCorner_EventScript_PokemonVendor_39
+# 2010 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_10
+# 2011 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 2012 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_23:
+# 1959 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_8
+# 1961 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1962 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_25:
+# 1935 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	removecoins 120
+# 1936 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	updatecoinsbox 1, 1
+# 1937 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playse SE_SHOP
+# 1938 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	delay 40
+# 1939 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	givemon SPECIES_ABRA, 15
+# 1940 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 1941 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_9
+# 1942 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	waitfanfare
+# 1943 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1944 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_28:
+# 2018 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	getpartysize
+# 2019 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq MauvilleCity_GameCorner_EventScript_PokemonVendor_37
+# 2027 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	checkcoins VAR_TEMP_0
+# 2028 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	compare VAR_TEMP_0, 9999
+	goto_if_ge MauvilleCity_GameCorner_EventScript_PokemonVendor_42
+# 2041 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_10
+# 2042 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 2043 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_31:
+# 1990 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_8
+# 1992 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1993 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_33:
+# 1967 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	removecoins 2222
+# 1968 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	updatecoinsbox 1, 1
+# 1969 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playse SE_SHOP
+# 1970 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	delay 40
+# 1971 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	givemon SPECIES_PIKACHU_HOENN, 15
+# 1972 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 1973 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_11
+# 1974 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	waitfanfare
+# 1975 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 1976 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_37:
+# 2021 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_8
+# 2023 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 2024 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_39:
+# 1998 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	removecoins 6666
+# 1999 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	updatecoinsbox 1, 1
+# 2000 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playse SE_SHOP
+# 2001 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	delay 40
+# 2002 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	givemon SPECIES_EEVEE, 15
+# 2003 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 2004 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_12
+# 2005 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	waitfanfare
+# 2006 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 2007 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_42:
+# 2029 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	removecoins 9999
+# 2030 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	updatecoinsbox 1, 1
+# 2031 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playse SE_SHOP
+# 2032 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	delay 40
+# 2033 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	givemon SPECIES_PORYGON, 15
+# 2034 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 2035 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	msgbox MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_13
+# 2036 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	waitfanfare
+# 2037 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	hidecoinsbox 1, 1
+# 2038 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	releaseall
+	end
+
+
 GameCorner_Mart1_Text_0:
 # 1760 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "Welcome!\p"
@@ -3745,3 +4008,62 @@ GameCorner_MeowthTalk_Text_0:
 GameCorner_MeowthTalk_Text_1:
 # 1882 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	.string "Meowth!$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_0:
+# 1894 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "You don't have the Coin Case yet$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_1:
+# 1899 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "You can exchange your Coins for\n"
+	.string "POKéMON here!\p"
+	.string "Do you want to check my offer?$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_2:
+# 1904 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "Come back if you've changed your mind!$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_3:
+# 1911 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "Abra       120 Coins$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_4:
+# 1912 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "Pikachu    2222 Coins$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_5:
+# 1913 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "Eevee      6666 Coins$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_6:
+# 1914 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "Porygon    9999 Coins$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_7:
+# 1915 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "Exit$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_8:
+# 1927 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "Oh? You've too many POKéMON.\n"
+	.string "There's no room for this one$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_9:
+# 1941 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "{PLAYER} received Abra!$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_10:
+# 1948 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "You don't have enough coins!$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_11:
+# 1973 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "{PLAYER} received Pikachu!$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_12:
+# 2004 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "{PLAYER} received Eevee!$"
+
+MauvilleCity_GameCorner_EventScript_PokemonVendor_Text_13:
+# 2035 "data/maps/MauvilleCity_GameCorner/scripts.pory"
+	.string "{PLAYER} received Porygon!$"

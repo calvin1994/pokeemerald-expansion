@@ -83,6 +83,22 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 71,
+      "y": 38,
+      "elevation": 3,
+      "item": "ITEM_HELIX_FOSSIL",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_HELIX_FOSSIL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 68,
+      "y": 38,
+      "elevation": 3,
+      "item": "ITEM_DOME_FOSSIL",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_DOME_FOSSIL"
     }
   ]
 }
