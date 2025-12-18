@@ -15,7 +15,7 @@ Route117_PokemonDayCare_OnTransition:
 
 script Route117_PokemonDayCare_RandEggGiver {
 
-    // Voraussetzung: beide Flags müssen TRUE sein
+    
     if (!flag(FLAG_BADGE04_GET)){
         lock
         faceplayer

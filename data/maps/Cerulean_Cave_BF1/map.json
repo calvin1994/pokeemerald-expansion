@@ -4,7 +4,7 @@
   "layout": "LAYOUT_CERULEAN_CAVE_BF1",
   "music": "MUS_CAVE_OF_ORIGIN",
   "region_map_section": "MAPSEC_CERULEAN_CAVE",
-  "requires_flash": false,
+  "requires_flash": true,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNKNOWN",
   "allow_cycling": true,
@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_MEWTWO",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MEWTWO)",
       "x": 7,
       "y": 12,
@@ -24,19 +25,38 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Cerulean_Cave_BF1_EventScript_Mewtwo",
+      "script": "0x0",
       "flag": "FLAG_HIDE_MEWTWO_CAVE"
     }
   ],
   "warp_events": [
     {
       "x": 5,
-      "y": 7,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CAVE_F1",
       "dest_warp_id": "6"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_MEWTWO_TRIGGER",
+      "var_value": "0",
+      "script": "Cerulean_Cave_BF1_Mewtwo_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_MEWTWO_TRIGGER",
+      "var_value": "1",
+      "script": "Cerulean_Cave_BF1_EventScript_Mewtwo"
+    }
+  ],
   "bg_events": []
 }

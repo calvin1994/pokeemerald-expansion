@@ -1183,3 +1183,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Cerulean_Island_Add1/scripts.inc"
 
 	.include "data/maps/VictoryRoad_Pond/scripts.inc"
+
+	.include "data/maps/PetalburgWoods_Cave/scripts.inc"

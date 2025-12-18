@@ -1,0 +1,117 @@
+raw`
+PetalburgWoods_Cave_MapScripts::
+	.byte 0
+
+`
+
+script PetalburgWoods_Cave_EventScript_Celebi_Trigger1 {
+playmoncry(SPECIES_CELEBI, CRY_MODE_NORMAL)
+setvar(VAR_CELEBI_TRIGGER, 1)
+waitmoncry
+}
+
+script PetalburgWoods_Cave_EventScript_Celebi_Trigger2 {
+setvar(VAR_CELEBI_TRIGGER, 0)
+delay(5)
+applymovement(OBJ_EVENT_ID_PLAYER, PlayerToCelebi)
+waitmovement
+playmoncry(SPECIES_CELEBI, CRY_MODE_NORMAL)
+waitmoncry
+playse (SE_BANG)
+fadescreen(FADE_TO_WHITE)
+delay(7)
+applymovement(LOCALID_CELEBI, CelebiToLeft)
+delay(8)
+fadescreen(FADE_FROM_WHITE)
+waitmovement
+delay(5)
+playmoncry(SPECIES_CELEBI, CRY_MODE_NORMAL)
+waitmoncry
+playse (SE_BANG)
+fadescreen(FADE_TO_WHITE)
+delay(7)
+applymovement(LOCALID_CELEBI, CelebiToRight)
+delay(8)
+fadescreen(FADE_FROM_WHITE)
+waitmovement
+delay(5)
+playmoncry(SPECIES_CELEBI, CRY_MODE_NORMAL)
+waitmoncry
+playse (SE_BANG)
+fadescreen(FADE_TO_WHITE)
+delay(7)
+applymovement(LOCALID_CELEBI, CelebiToPlayer)
+delay(8)
+fadescreen(FADE_FROM_WHITE)
+waitmovement
+delay(55)
+playmoncry(SPECIES_CELEBI, CRY_MODE_ENCOUNTER)
+applymovement(LOCALID_CELEBI, CelebiToPlayer2)
+waitmovement
+waitmoncry
+setflag(FLAG_CANT_FLEE)
+setwildbattle(SPECIES_CELEBI, 30, ITEM_NONE)
+dowildbattle
+specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		call(Caught_Celebi)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		call(Won_Celebi)
+	}
+    elif(var(VAR_RESULT) == B_OUTCOME_LOST){
+		call(Lost_Battle_Celebi)
+	}
+}
+
+script Won_Celebi {
+    setvar(VAR_CELEBI_TRIGGER, 2)
+    clearflag(FLAG_CANT_FLEE)
+    fadescreen(FADE_TO_WHITE)
+	removeobject(1)
+    playse(SE_FLEE)
+    delay(10)
+    fadescreen(FADE_FROM_WHITE)
+    msgbox("Celebi went forever...")
+    releaseall
+	return
+}
+
+script Caught_Celebi {
+    setvar(VAR_CELEBI_TRIGGER, 2)
+    clearflag(FLAG_CANT_FLEE)
+    fadescreen(FADE_TO_WHITE)
+	removeobject(1)
+    delay(10)
+    fadescreen(FADE_FROM_WHITE)
+	return
+}
+
+script Lost_Battle_Celebi {
+    setflag(FLAG_HIDE_CELEBI_EVENT)
+    clearflag(FLAG_CANT_FLEE)
+	return
+}
+
+movement PlayerToCelebi {
+	walk_up *6
+}
+
+
+movement CelebiToLeft {
+	walk_faster_left *17
+    walk_faster_down *6
+}
+
+movement CelebiToRight {
+	walk_faster_right *17
+    walk_faster_up *10
+    walk_faster_left *9
+}
+movement CelebiToPlayer {
+	walk_down *5
+}
+
+movement CelebiToPlayer2 {
+	walk_down
+}

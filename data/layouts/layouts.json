@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/VictoryRoad_Pond/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_Pond/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_WOODS_CAVE",
+      "name": "PetalburgWoods_Cave_Layout",
+      "width": 21,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/PetalburgWoods_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgWoods_Cave/map.bin"
     }
   ]
 }

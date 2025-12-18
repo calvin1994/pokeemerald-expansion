@@ -83,7 +83,7 @@
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
+#define FLAG_HIDE_CELEBI_EVENT    0x48 // Used to make ow Celebi  disappear
 #define FLAG_HIDE_ESPEON     0x49 // Used to make ow Espeon disappear
 #define FLAG_HIDE_UMBREON    0x4A // Used to make ow Umbreon disappear
 #define FLAG_HIDE_LAPRAS_VIC 0x4B // Used to make ow Lapras disappear
@@ -98,7 +98,7 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
+#define FLAG_CANT_FLEE                       0x54  // Set flag to make escaping impossibru
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
