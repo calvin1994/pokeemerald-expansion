@@ -2050,3 +2050,118 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1026 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
+
+testytesttesttesty::
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	lock
+# 1033 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	message testytesttesttesty_Text_0
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1036 "data/maps/LittlerootTown/scripts.pory"
+	pokemart testMart
+# 1037 "data/maps/LittlerootTown/scripts.pory"
+	msgbox testytesttesttesty_Text_1
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+	release
+	end
+
+
+	.align 2
+# 1042 "data/maps/LittlerootTown/scripts.pory"
+testMart:
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_ROOST
+# 1044 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_FOCUS_BLAST
+# 1045 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_ENERGY_BALL
+# 1046 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_FALSE_SWIPE
+# 1047 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_BRINE
+# 1048 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_FLING
+# 1049 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_CHARGE_BEAM
+# 1050 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_ENDURE
+# 1051 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_DRAGON_PULSE
+# 1052 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_DRAIN_PUNCH
+# 1053 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_WILL_O_WISP
+# 1054 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_SILVER_WIND
+# 1055 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_EMBARGO
+# 1056 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_EXPLOSION
+# 1057 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_SHADOW_CLAW
+# 1058 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_PAYBACK
+# 1059 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_RECYCLE
+# 1060 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_GIGA_IMPACT
+# 1061 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_ROCK_POLISH
+# 1062 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_NIGHTMARE
+# 1063 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_STONE_EDGE
+# 1064 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_AVALANCHE
+# 1065 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_THUNDER_WAVE
+# 1066 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_GYRO_BALL
+# 1067 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_SWORDS_DANCE
+# 1068 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_STEALTH_ROCK
+# 1069 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_PSYCH_UP
+# 1070 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_CAPTIVATE
+# 1071 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_DARK_PULSE
+# 1072 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_ROCK_SLIDE
+# 1073 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_X_SCISSOR
+# 1074 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_SLEEP_TALK
+# 1075 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_NATURAL_GIFT
+# 1076 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_POISON_JAB
+# 1077 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_DREAM_EATER
+# 1078 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_GRASS_KNOT
+# 1079 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_SWAGGER
+# 1080 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_PLUCK
+# 1081 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_U_TURN
+# 1082 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_SUBSTITUTE
+# 1083 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_FLASH_CANNON
+# 1084 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_TM_TRICK_ROOM
+	.2byte ITEM_NONE
+
+testytesttesttesty_Text_0:
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	.string "How may I serve you?$"
+
+testytesttesttesty_Text_1:
+# 1037 "data/maps/LittlerootTown/scripts.pory"
+	.string "Please Come Again.$"
