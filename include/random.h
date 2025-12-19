@@ -218,6 +218,7 @@ enum RandomTag
     RNG_BALLTHROW_CRITICAL,
     RNG_BALLTHROW_SHAKE,
     RNG_PROTECT_FAIL,
+    RNG_WONDER_TRADE,
 };
 
 #define RandomWeighted(tag, ...) \
