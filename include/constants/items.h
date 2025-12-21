@@ -256,7 +256,7 @@
 #define ITEM_BLACK_APRICORN 194
 #define ITEM_BLK_APRICORN ITEM_BLACK_APRICORN // Pre-Gen VI name
 
-#define ITEM_WISHING_PIECE 195
+#define ITEM_WISH_STONE 195
 #define ITEM_GALARICA_TWIG 196
 #define ITEM_ARMORITE_ORE 197
 #define ITEM_DYNITE_ORE 198
@@ -1002,11 +1002,13 @@
 #define ITEM_ROCK_SMASH_TOOL 834
 #define ITEM_WATERFALL_TOOL 835
 #define ITEM_DIVE_TOOL 836 // field items end
+#define ITEM_CERULEAN_TICKET 837
+#define ITEM_GS_BALL 838
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 837
+#define ITEMS_COUNT 839
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

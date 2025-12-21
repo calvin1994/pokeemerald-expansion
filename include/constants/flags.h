@@ -80,10 +80,10 @@
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_HIDE_CELEBI_EVENT    0x48 // Used to make ow Celebi  disappear
+#define FLAG_HIDE_ARTICUNO_CAVE    0x45 // Used to make ow ARTICUNO disappear
+#define FLAG_HIDE_ZAPDOS_CAVE    0x46 // Used to make ow ZAPDOS disappear
+#define FLAG_HIDE_MOLTRES_CAVE    0x47 // Used to make ow MOLTRESS disappear
+#define FLAG_HIDE_CELEBI_EVENT    0x48 // Used to make ow Celebi disappear
 #define FLAG_HIDE_ESPEON     0x49 // Used to make ow Espeon disappear
 #define FLAG_HIDE_UMBREON    0x4A // Used to make ow Umbreon disappear
 #define FLAG_HIDE_LAPRAS_VIC 0x4B // Used to make ow Lapras disappear
@@ -658,7 +658,7 @@
 
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_HELIX_FOSSIL         (FLAG_HIDDEN_ITEMS_START + 0x264)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_DOME_FOSSIL          (FLAG_HIDDEN_ITEMS_START + 0x265)
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
+#define FLAG_CELEBI_CAVE_OPENED  0x266 // Celebi Cave was and stays opened
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
@@ -1233,7 +1233,7 @@
 #define FLAG_INGAME_DRATINI_TRADE                                   0x49B // Trade Dratini Flag
 #define FLAG_INGAME_LARVITAR_TRADE                                  0x49C // Trade Larvitar Flag
 #define FLAG_INGAME_GASTLY_TRADE                                    0x49D // Trade Gastly Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
+#define FLAG_INGAME_SURSKIT_TRADE                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag

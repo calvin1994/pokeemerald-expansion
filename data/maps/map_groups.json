@@ -431,7 +431,16 @@
     "AlteringCave",
     "MeteorFalls_StevensCave",
     "VictoryRoad_Pond",
-    "PetalburgWoods_Cave"
+    "PetalburgWoods_Cave",
+    "Moltress_Cave",
+    "FieryPath2",
+    "FieryPath3",
+    "Zapdos_Cave",
+    "Zapdos_Cave_B2F",
+    "Zapdos_Cave_B3F",
+    "Articuno_Cave",
+    "Articuno_Cave_2",
+    "Articuno_Cave_3"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

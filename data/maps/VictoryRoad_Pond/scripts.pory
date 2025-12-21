@@ -4,11 +4,13 @@ VictoryRoad_Pond_MapScripts::
 
 script VictoryRoad_Pond_EventScript_Lapras {
 	lockall
+	setflag(FLAG_CANT_FLEE)
 	playmoncry(SPECIES_LAPRAS, CRY_MODE_ENCOUNTER)
 	delay(40)
 	waitmoncry
 	setwildbattle(SPECIES_LAPRAS, 50, ITEM_NONE)
 	dowildbattle
+	setflag(FLAG_CANT_FLEE)
 	specialvar(VAR_RESULT, GetBattleOutcome)
 	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
 		call(Won_or_Caught_Lapras)

@@ -6,8 +6,8 @@ PetalburgWoods_Cave_MapScripts::
 
 script PetalburgWoods_Cave_EventScript_Celebi_Trigger1 {
 playmoncry(SPECIES_CELEBI, CRY_MODE_NORMAL)
-setvar(VAR_CELEBI_TRIGGER, 1)
 waitmoncry
+setvar(VAR_CELEBI_TRIGGER, 1)
 }
 
 script PetalburgWoods_Cave_EventScript_Celebi_Trigger2 {
@@ -50,21 +50,22 @@ applymovement(LOCALID_CELEBI, CelebiToPlayer2)
 waitmovement
 waitmoncry
 setflag(FLAG_CANT_FLEE)
-setwildbattle(SPECIES_CELEBI, 30, ITEM_NONE)
-dowildbattle
+setwildbattle(SPECIES_CELEBI, 20, ITEM_NONE)
+special(BattleSetup_StartLegendaryBattle)
 specialvar(VAR_RESULT, GetBattleOutcome)
+waitstate
     if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
-		call(Caught_Celebi)
+		call(Won_or_Caught_Celebi)
 	}
 	elif(var(VAR_RESULT) == B_OUTCOME_WON){
-		call(Won_Celebi)
+		call(Won_or_Caught_Celebi)
 	}
-    elif(var(VAR_RESULT) == B_OUTCOME_LOST){
-		call(Lost_Battle_Celebi)
+	else{
+		call(RanAway_Celebi)
 	}
 }
 
-script Won_Celebi {
+script Won_or_Caught_Celebi {
     setvar(VAR_CELEBI_TRIGGER, 2)
     clearflag(FLAG_CANT_FLEE)
     fadescreen(FADE_TO_WHITE)
@@ -72,25 +73,11 @@ script Won_Celebi {
     playse(SE_FLEE)
     delay(10)
     fadescreen(FADE_FROM_WHITE)
-    msgbox("Celebi went forever...")
-    releaseall
-	return
+	end
 }
 
-script Caught_Celebi {
-    setvar(VAR_CELEBI_TRIGGER, 2)
-    clearflag(FLAG_CANT_FLEE)
-    fadescreen(FADE_TO_WHITE)
-	removeobject(1)
-    delay(10)
-    fadescreen(FADE_FROM_WHITE)
-	return
-}
-
-script Lost_Battle_Celebi {
-    setflag(FLAG_HIDE_CELEBI_EVENT)
-    clearflag(FLAG_CANT_FLEE)
-	return
+script RanAway_Celebi {
+	end
 }
 
 movement PlayerToCelebi {

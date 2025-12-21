@@ -4480,6 +4480,96 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/PetalburgWoods_Cave/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgWoods_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOLTRESS_CAVE",
+      "name": "Moltress_Cave_Layout",
+      "width": 16,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Moltress_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Moltress_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIERY_PATH3",
+      "name": "FieryPath3_Layout",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/FieryPath3/border.bin",
+      "blockdata_filepath": "data/layouts/FieryPath3/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIERY_PATH2",
+      "name": "FieryPath2_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/FieryPath2/border.bin",
+      "blockdata_filepath": "data/layouts/FieryPath2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZAPDOS_CAVE",
+      "name": "Zapdos_Cave_Layout",
+      "width": 51,
+      "height": 21,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Zapdos_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Zapdos_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZAPDOS_CAVE_B3F",
+      "name": "Zapdos_Cave_B3F_Layout",
+      "width": 24,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Zapdos_Cave_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/Zapdos_Cave_B3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZAPDOS_CAVE_B2F",
+      "name": "Zapdos_Cave_B2F_Layout",
+      "width": 29,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Zapdos_Cave_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/Zapdos_Cave_B2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARTICUNO_CAVE_3",
+      "name": "Articuno_Cave_3_Layout",
+      "width": 19,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Articuno_Cave_3/border.bin",
+      "blockdata_filepath": "data/layouts/Articuno_Cave_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARTICUNO_CAVE",
+      "name": "Articuno_Cave_Layout",
+      "width": 18,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Articuno_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Articuno_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARTICUNO_CAVE_2",
+      "name": "Articuno_Cave_2_Layout",
+      "width": 19,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Articuno_Cave_2/border.bin",
+      "blockdata_filepath": "data/layouts/Articuno_Cave_2/map.bin"
     }
   ]
 }

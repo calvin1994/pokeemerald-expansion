@@ -1,0 +1,47 @@
+raw`
+Moltress_Cave_MapScripts::
+	.byte 0
+
+`
+script Moltress_Cave_EventScript_Moltres {
+ 
+	lockall
+	setflag(FLAG_CANT_FLEE)
+	call(MoltresShake)
+	setwildbattle(SPECIES_MOLTRES, 70, ITEM_NONE)
+	special(BattleSetup_StartLegendaryBattle)
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	waitstate
+	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		call(Won_or_Caught_Moltres)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		call(Won_or_Caught_Moltres)
+	}
+	else{
+		call(RanAway_Moltres)
+	}
+}
+ 
+script Won_or_Caught_Moltres {
+	clearflag(FLAG_CANT_FLEE)
+	fadescreen(FADE_TO_BLACK)
+	removeobject(1)
+	fadescreen(FADE_FROM_BLACK)
+	end
+}
+ 
+script RanAway_Moltres {
+	end
+}
+
+script MoltresShake {
+	playmoncry(SPECIES_MOLTRES, CRY_MODE_ENCOUNTER)
+	setvar(VAR_0x8004, 2)  //@ vertical pan
+	setvar(VAR_0x8005, 6)  //@ horizontal pan
+	setvar(VAR_0x8006, 8)  //@ num shakes
+	setvar(VAR_0x8007, 4)  //@ shake delay
+	special(ShakeCamera)
+	waitstate
+	delay(36)
+}

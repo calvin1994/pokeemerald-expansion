@@ -1,6 +1,11 @@
 raw`
 PetalburgWoods_MapScripts::
+map_script MAP_SCRIPT_ON_LOAD, PetalburgWoods_OnLoad
 	.byte 0
+
+PetalburgWoods_OnLoad:
+	call_if_set FLAG_CELEBI_CAVE_OPENED, PetalburgWoods_EventScript_OpenCelebiCave
+	end
 
 PetalburgWoods_EventScript_DevonResearcherLeft::
 	lockall
@@ -475,9 +480,61 @@ PetalburgWoods_Text_TrainerTipsPP:
 
 `
 
-script PetalburgWoods_EventScript_CelebiShrine {
-    setmetatile (55, 34, METATILE_General_CaveEntrance_Top, TRUE)
+script PetalburgWoods_EventScript_OpenCelebiCave
+{
+	if(flag(FLAG_CELEBI_CAVE_OPENED)){
+	setmetatile (55, 34, METATILE_General_CaveEntrance_Top, TRUE)
     setmetatile (55, 35, METATILE_General_CaveEntrance_Bottom, FALSE)
-    special (DrawWholeMapView)
-    return
+	}
+}
+
+script PetalburgWoods_EventScript_CelebiShrine {
+	if(!flag(FLAG_CELEBI_CAVE_OPENED)){
+	if(checkitem(ITEM_GS_BALL)) {
+		lock
+		msgbox("ILEX FOREST SHRINE…\p"
+		   "It's in honor of the forest's\n"
+		   "protector.")
+		   playse(SE_PIN)
+		   applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+		   delay(20)
+		   msgbox("Oh? What is this?\p"
+		   "It's a hole.\p"
+		   "It looks like the GS Ball would\n"
+		   "perfectly fit inside of it!\p"
+		   "Would you like to put the\n"
+		   "GS BALL in there?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES)
+    {
+			setflag(FLAG_CELEBI_CAVE_OPENED)
+			removeitem (ITEM_GS_BALL)
+			msgbox("{PLAYER} put in the GS Ball.")
+			waitmessage
+			setvar (VAR_0x8004, 1)  // vertical pan
+			setvar (VAR_0x8005, 1)  // horizontal pan
+			setvar (VAR_0x8006, 5)  // num shakes
+			setvar (VAR_0x8007, 7 ) // shake delay
+			special (ShakeCamera)
+			applymovement(OBJ_EVENT_ID_PLAYER, PlayerFaceUpWoods)
+			delay(40)
+    		setmetatile (55, 34, METATILE_General_CaveEntrance_Top, TRUE)
+    		setmetatile (55, 35, METATILE_General_CaveEntrance_Bottom, FALSE)
+			playse (SE_BANG)
+			special (DrawWholeMapView)
+			delay(20)
+			releaseall
+		}
+		releaseall
+		end
+	}
+}
+	lock
+	msgbox("ILEX FOREST SHRINE…\p"
+		   "It's in honor of the forest's\n"
+		   "protector.")
+	releaseall
+}
+
+movement PlayerFaceUpWoods {
+	face_up
 }

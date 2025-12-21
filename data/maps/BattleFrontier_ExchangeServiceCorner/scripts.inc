@@ -1609,8 +1609,10 @@ BPMartTickets:
 # 831 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	.2byte ITEM_AURORA_TICKET
 # 832 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
-	.2byte ITEM_OLD_SEA_MAP
+	.2byte ITEM_CERULEAN_TICKET
 # 833 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
+	.2byte ITEM_OLD_SEA_MAP
+# 834 "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.pory"
 	.2byte ITEM_MASTER_BALL
 	.2byte ITEM_NONE
 

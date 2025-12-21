@@ -160,7 +160,7 @@ RustboroCity_DevonCorp_3F_EventScript_MrStone::
 
 RustboroCity_DevonCorp_3F_EventScript_GiveExpShare::
 	msgbox RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter, MSGBOX_DEFAULT
-	giveitem ITEM_BIG_NUGGET
+	giveitem ITEM_GS_BALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_EXP_SHARE
 	msgbox RustboroCity_DevonCorp_3F_Text_ExplainExpShare, MSGBOX_DEFAULT
@@ -249,11 +249,12 @@ RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
 	.string "It should help you, a TRAINER.$"
 
 RustboroCity_DevonCorp_3F_Text_ExplainExpShare:
-	.string "MR. STONE: I am rich and so will you!\n"
-	.string "Take this as a token of appreciation .\l"
-	.string "for your efforts.\p"
-	.string "Keep it or sell it.\n"
-	.string "It is up to you!.$"
+	.string "MR. STONE: Take this as a token of\l"
+	.string "appreciation for your efforts.\p"
+	.string "It's a mysterious ball from the.\l"
+	.string "JOHTO REGION.\p"
+	.string "Since you seem to travel the world.\l"
+	.string "it might be in good hand with you.$"
 
 RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends:
 	.string "MR. STONE: Since my youth, I've immersed\n"

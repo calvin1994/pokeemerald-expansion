@@ -1187,3 +1187,21 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/VictoryRoad_Pond/scripts.inc"
 
 	.include "data/maps/PetalburgWoods_Cave/scripts.inc"
+
+	.include "data/maps/Moltress_Cave/scripts.inc"
+
+	.include "data/maps/FieryPath3/scripts.inc"
+
+	.include "data/maps/FieryPath2/scripts.inc"
+
+	.include "data/maps/Zapdos_Cave/scripts.inc"
+
+	.include "data/maps/Zapdos_Cave_B3F/scripts.inc"
+
+	.include "data/maps/Zapdos_Cave_B2F/scripts.inc"
+
+	.include "data/maps/Articuno_Cave_3/scripts.inc"
+
+	.include "data/maps/Articuno_Cave/scripts.inc"
+
+	.include "data/maps/Articuno_Cave_2/scripts.inc"

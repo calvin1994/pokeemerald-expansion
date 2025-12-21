@@ -22,6 +22,7 @@ enum InGameTradeID
     INGAME_TRADE_DRATINI,
     INGAME_TRADE_LARVITAR,
     INGAME_TRADE_GASTLY,
+    INGAME_TRADE_SURSKIT,
 };
 
 // Return values for CanTradeSelectedMon and CanSpinTradeMon

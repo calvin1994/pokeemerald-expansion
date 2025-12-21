@@ -36,35 +36,31 @@ script Cerulean_Cave_BF1_EventScript_Mewtwo {
 	delay(25)
 	setflag(FLAG_CANT_FLEE)
 	setwildbattle(SPECIES_MEWTWO, 70, ITEM_NONE)
-	dowildbattle
+	special(BattleSetup_StartLegendaryBattle)
 	specialvar(VAR_RESULT, GetBattleOutcome)
+	waitstate
 	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
 		call(Won_or_Caught_Mewtwo)
 	}
 	elif(var(VAR_RESULT) == B_OUTCOME_WON){
 		call(Won_or_Caught_Mewtwo)
 	}
-    elif(var(VAR_RESULT) == B_OUTCOME_LOST){
-		call(Lost_Battle_Mewtwo)
+	else{
+		call(RanAway_Mewtwo)
 	}
-	waitmessage
-	releaseall
 }
  
 script Won_or_Caught_Mewtwo {
-	clearflag(FLAG_CANT_FLEE)
-	removeobject(1)
 	setvar(VAR_MEWTWO_TRIGGER, 2)
-	return
+	clearflag(FLAG_CANT_FLEE)
+	fadescreen(FADE_TO_BLACK)
+	removeobject(1)
+	fadescreen(FADE_FROM_BLACK)
+	end
 }
 
-
-script Lost_Battle_Mewtwo {
-	clearflag(FLAG_CANT_FLEE)
-    setflag(FLAG_HIDE_MEWTWO_CAVE)
-	playmoncry(SPECIES_MEWTWO, CRY_MODE_ENCOUNTER)
-	delay(20)
-	return
+script RanAway_Mewtwo {
+	end
 }
 
 movement MewtwoEngage {

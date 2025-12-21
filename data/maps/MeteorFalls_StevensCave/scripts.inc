@@ -15,6 +15,9 @@ MeteorFalls_StevensCave_EventScript_Steven::
 	msgbox MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_STEVEN, MeteorFalls_StevensCave_Text_StevenDefeat
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
+	msgbox MeteorFalls_StevensCave_Text_WishStoneRecieve, MSGBOX_DEFAULT
+	giveitem ITEM_WISH_STONE
+	waitfanfare
 	setflag FLAG_DEFEATED_METEOR_FALLS_STEVEN
 	release
 	end
@@ -25,6 +28,14 @@ MeteorFalls_StevensCave_EventScript_Defeated::
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
 	release
 	end
+
+MeteorFalls_StevensCave_Text_WishStoneRecieve:
+	.string "But there is one thing I can tell you.\p"
+	.string "Or rather give you...\p"
+	.string "As a sign of your willpower\n"
+	.string "to be able to fulfill your every\l"
+	.string "wish!\p"
+	.string "Take this!$"
 
 MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst:
 	.string "STEVEN: Oh, wow, {PLAYER}{KUN}.\n"

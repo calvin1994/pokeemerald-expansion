@@ -3404,4 +3404,10 @@ extern const u32 gBattleIcons_Gfx2[];
 extern const u16 gBattleIcons_Pal1[];
 extern const u16 gBattleIcons_Pal2[];
 
+extern const u32 gItemIcon_CeruleanTicket[];
+extern const u16 gItemIconPalette_CeruleanTicket[];
+
+extern const u32 gItemIcon_GSBall[];
+extern const u16 gItemIconPalette_GSBall[];
+
 #endif //GUARD_GRAPHICS_H

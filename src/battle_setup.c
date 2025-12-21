@@ -506,6 +506,21 @@ void BattleSetup_StartLegendaryBattle(void)
     case SPECIES_MEW:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
+    case SPECIES_CELEBI:
+        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
+        break;
+    case SPECIES_MEWTWO:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEOXYS);
+        break;
+    case SPECIES_ZAPDOS:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
+        break;
+    case SPECIES_ARTICUNO:
+        CreateBattleStartTask(B_TRANSITION_GROUDON, MUS_RG_VS_LEGEND);
+        break;
+    case SPECIES_MOLTRES:
+        CreateBattleStartTask(B_TRANSITION_KYOGRE, MUS_RG_VS_LEGEND);
+        break;
     }
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);

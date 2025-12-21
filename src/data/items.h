@@ -3794,19 +3794,18 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_BlackApricorn,
     },
 
-    [ITEM_WISHING_PIECE] =
+    [ITEM_WISH_STONE] =
     {
-        .name = ITEM_NAME("Wishing Piece"),
+        .name = ITEM_NAME("Wish Stone"),
         .price = 20,
         .description = COMPOUND_STRING(
-            "Throw into a\n"
-            "{PKMN} Den to attract\n"
-            "Dynamax Pokémon."),
-        .pocket = POCKET_ITEMS,
+            "One of the owners\n"
+            "wishes comes true!"),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
-        .flingPower = 50,
         .iconPic = gItemIcon_WishingPiece,
         .iconPalette = gItemIconPalette_WishingPiece,
     },
@@ -14969,6 +14968,40 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_Dive,
         .iconPic = gItemIcon_QuestionMark,
         .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_CERULEAN_TICKET] =
+    {
+        .name = ITEM_NAME("Cerulean Ticket"),
+        .price = 0,
+        .bpPrice = 100,
+        .description = COMPOUND_STRING(
+            "The ticket for a\n"
+            "ferry to a distant\n"
+            "Kanto island."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 1,
+        .iconPic = gItemIcon_CeruleanTicket,
+        .iconPalette = gItemIconPalette_CeruleanTicket,
+    },
+
+    [ITEM_GS_BALL] =
+    {
+        .name = ITEM_NAME("GS Ball"),
+        .price = 0,
+        .bpPrice = 100,
+        .description = COMPOUND_STRING(
+            "A mysterious Ball."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 1,
+        .iconPic = gItemIcon_GSBall,
+        .iconPalette = gItemIconPalette_GSBall,
     },
 };
 

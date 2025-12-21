@@ -1,0 +1,18 @@
+raw`
+ShoalCave_LowTideIceRoom_MapScripts::
+map_script MAP_SCRIPT_ON_LOAD, ShoalCave_LowTideIceRoom_OnLoad
+	.byte 0
+
+
+ShoalCave_LowTideIceRoom_OnLoad:
+call_if_set FLAG_SYS_GAME_CLEAR, ShoalCave_LowTideIceRoom_EventScript_ArticunoCave
+end
+
+`
+
+script ShoalCave_LowTideIceRoom_EventScript_ArticunoCave
+{
+	if(flag(FLAG_SYS_GAME_CLEAR)){
+    setmetatile (11, 19, 0x38B, FALSE)
+	}
+}
