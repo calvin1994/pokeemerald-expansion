@@ -4545,7 +4545,7 @@
       "id": "LAYOUT_ARTICUNO_CAVE_3",
       "name": "Articuno_Cave_3_Layout",
       "width": 19,
-      "height": 30,
+      "height": 31,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Articuno_Cave_3/border.bin",
@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_ARTICUNO_CAVE",
       "name": "Articuno_Cave_Layout",
-      "width": 18,
+      "width": 20,
       "height": 16,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
@@ -4564,8 +4564,8 @@
     {
       "id": "LAYOUT_ARTICUNO_CAVE_2",
       "name": "Articuno_Cave_2_Layout",
-      "width": 19,
-      "height": 19,
+      "width": 20,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Articuno_Cave_2/border.bin",

@@ -33,7 +33,7 @@ FortreeCity_House5_Text_AdaptedToNature:
 FortreeCity_House5_Text_Zigzagoon:
 	.string "ZIGZAGOON: Bufuu!$"
 
-FortreeCity_House5_EventScript_SurskitTrade
+FortreeCity_House5_EventScript_SurskitTrade::
 
 	// Check a flag to see if the trade has already happened
 	lock
@@ -86,8 +86,7 @@ ArticunoFortreeCity_House5_EventScript_TradeCompleted_Text::
 	.string "Take good care of my Surskit!$"
  
 ArticunoFortreeCity_House5_Text_WillingToTradeIt::
-	.string "Check out this {STR_VAR_2}!\n"
-	.string "It took me years to evolve it!\p"
+	.string "Check out this {STR_VAR_2}!\p"
 	.string "I'll tell you what. I might be willing\n"
 	.string "to trade it for a {STR_VAR_1}.$"
  

@@ -32,7 +32,7 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 28,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_ARTICUNO_CAVE_2",
       "dest_warp_id": "1"
